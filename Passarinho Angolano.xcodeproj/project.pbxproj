@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E54E23A1D61E21D0019FFE0 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E2391D61E21D0019FFE0 /* bg.jpg */; };
+		5E54E23C1D61E3890019FFE0 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23B1D61E3890019FFE0 /* bg2.jpg */; };
+		5E54E2401D62621E0019FFE0 /* bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23F1D62621E0019FFE0 /* bkg.png */; };
 		5EADA15B1D5F5E3F0093201D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EADA15A1D5F5E3F0093201D /* AppDelegate.swift */; };
 		5EADA15D1D5F5E3F0093201D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA15C1D5F5E3F0093201D /* GameScene.sks */; };
 		5EADA15F1D5F5E3F0093201D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EADA15E1D5F5E3F0093201D /* GameScene.swift */; };
@@ -14,9 +17,17 @@
 		5EADA1641D5F5E3F0093201D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1621D5F5E3F0093201D /* Main.storyboard */; };
 		5EADA1661D5F5E3F0093201D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1651D5F5E3F0093201D /* Assets.xcassets */; };
 		5EADA1691D5F5E3F0093201D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1671D5F5E3F0093201D /* LaunchScreen.storyboard */; };
+		5EADA1751D5F62110093201D /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1701D5F62110093201D /* bg.png */; };
+		5EADA1761D5F62110093201D /* flappy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1711D5F62110093201D /* flappy1.png */; };
+		5EADA1771D5F62110093201D /* flappy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1721D5F62110093201D /* flappy2.png */; };
+		5EADA1781D5F62110093201D /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1731D5F62110093201D /* pipe1.png */; };
+		5EADA1791D5F62110093201D /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1741D5F62110093201D /* pipe2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E54E2391D61E21D0019FFE0 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		5E54E23B1D61E3890019FFE0 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
+		5E54E23F1D62621E0019FFE0 /* bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkg.png; sourceTree = "<group>"; };
 		5EADA1571D5F5E3F0093201D /* Flappy Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EADA15A1D5F5E3F0093201D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EADA15C1D5F5E3F0093201D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -26,6 +37,11 @@
 		5EADA1651D5F5E3F0093201D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EADA1681D5F5E3F0093201D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EADA16A1D5F5E3F0093201D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EADA1701D5F62110093201D /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		5EADA1711D5F62110093201D /* flappy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy1.png; sourceTree = "<group>"; };
+		5EADA1721D5F62110093201D /* flappy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy2.png; sourceTree = "<group>"; };
+		5EADA1731D5F62110093201D /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe1.png; sourceTree = "<group>"; };
+		5EADA1741D5F62110093201D /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,14 @@
 		5EADA1591D5F5E3F0093201D /* Flappy Bird */ = {
 			isa = PBXGroup;
 			children = (
+				5E54E23F1D62621E0019FFE0 /* bkg.png */,
+				5E54E23B1D61E3890019FFE0 /* bg2.jpg */,
+				5E54E2391D61E21D0019FFE0 /* bg.jpg */,
+				5EADA1701D5F62110093201D /* bg.png */,
+				5EADA1711D5F62110093201D /* flappy1.png */,
+				5EADA1721D5F62110093201D /* flappy2.png */,
+				5EADA1731D5F62110093201D /* pipe1.png */,
+				5EADA1741D5F62110093201D /* pipe2.png */,
 				5EADA15A1D5F5E3F0093201D /* AppDelegate.swift */,
 				5EADA15C1D5F5E3F0093201D /* GameScene.sks */,
 				5EADA15E1D5F5E3F0093201D /* GameScene.swift */,
@@ -128,10 +152,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E54E23A1D61E21D0019FFE0 /* bg.jpg in Resources */,
+				5EADA1771D5F62110093201D /* flappy2.png in Resources */,
+				5EADA1751D5F62110093201D /* bg.png in Resources */,
 				5EADA15D1D5F5E3F0093201D /* GameScene.sks in Resources */,
+				5EADA1781D5F62110093201D /* pipe1.png in Resources */,
 				5EADA1691D5F5E3F0093201D /* LaunchScreen.storyboard in Resources */,
+				5E54E2401D62621E0019FFE0 /* bkg.png in Resources */,
+				5E54E23C1D61E3890019FFE0 /* bg2.jpg in Resources */,
+				5EADA1791D5F62110093201D /* pipe2.png in Resources */,
 				5EADA1661D5F5E3F0093201D /* Assets.xcassets in Resources */,
 				5EADA1641D5F5E3F0093201D /* Main.storyboard in Resources */,
+				5EADA1761D5F62110093201D /* flappy1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +326,7 @@
 				5EADA16F1D5F5E3F0093201D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
