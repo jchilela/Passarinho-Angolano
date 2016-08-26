@@ -80,7 +80,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     var isStarting = true
+    var firstTouch = true // Lets track if the user touch the screen for the first time but not in the button
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if firstTouch == true{
+        
+        makeBird()
+        
+        
+        //Add the ground. It will be invisible. A boddy that collides with it will not disappear from the screen.
+        var ground = SKNode()
+        ground.position = CGPointMake(0, 0)
+        ground.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(self.frame.size.width, 1)) // Remove the gravity from the ground
+        ground.physicsBody?.dynamic = false
+        
+        
+        ground.physicsBody?.categoryBitMask = ColliderType.Object.rawValue
+        ground.physicsBody?.contactTestBitMask = ColliderType.Object.rawValue
+        ground.physicsBody?.collisionBitMask = ColliderType.Object.rawValue
+        self.addChild(ground)
+        
+        
+        
+        
+        
+        
+        //IF you want to INCREASE THE LEVEL OF THE DIFFICULT INCREASE THE TYME HERE
+        _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("makePipes"), userInfo: nil, repeats: true)
+        isStarting = false
+        firstTouch = false
+        }
+        
         button.removeFromParent()
         // Loop over all the touches in this event
         for touch: AnyObject in touches {
@@ -316,8 +345,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if gameOver == false {
-        bird.physicsBody?.velocity = CGVectorMake(0, 0)
-        bird.physicsBody?.applyImpulse(CGVectorMake(0, 50)) // To increase the difficult of the game change this value
+            
+            bird.physicsBody?.velocity = CGVectorMake(0, 0)
+            bird.physicsBody?.applyImpulse(CGVectorMake(0, 50)) // To increase the difficult of the game change this value
+            
+            
+            
         } else{
             // IF LIFE IS EQUAL TO 0. THEN WE RESTART THE GAME
             if life == 0{
