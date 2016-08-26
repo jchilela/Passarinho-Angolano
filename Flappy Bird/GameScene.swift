@@ -9,7 +9,11 @@
 import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    var life = 3
+    
+    
     var scoreLabel = SKLabelNode()
+    var lifeLabel = SKLabelNode()
     
     
      var button = SKSpriteNode(imageNamed: "iniciar.png")
@@ -131,6 +135,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(labelContainer)
         
         makeBackground()
+        
+        //SCORE LABEL
         scoreLabel.fontName = "Helvetica"
         scoreLabel.fontSize = 25
         scoreLabel.text = "Pontos: 0"
@@ -138,6 +144,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
         
         self.addChild(scoreLabel)
+        
+        //LIFE LABEL
+        
+       lifeLabel.fontName = "Helvetica"
+        lifeLabel.fontSize = 25
+        lifeLabel.text = "Vidas: \(life)"
+        lifeLabel.fontColor = UIColor.yellowColor()
+        lifeLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 110, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
+        
+        self.addChild(lifeLabel)
      
         
         
@@ -253,29 +269,42 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
             score++
              scoreLabel.text = "Pontos: \(score)"
+            
         
         }else{
             
             if gameOver == false {
-                 gameOver = true
-                self.speed = 0 // set the speed in scene to 0. Everything
-
-            gameOverLabel.fontName = "Helvetica"
-            gameOverLabel.fontSize = 15
-            gameOverLabel.text = "O jogo terminou. Clique na tela para voltar a jogar."
-            gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
-            labelContainer.addChild(gameOverLabel)
                 
-                //Game Over Label Score
-                gameOverLabelScore.fontName = "Helvetica"
-                gameOverLabelScore.fontSize = 25
-                gameOverLabelScore.text = "Pontuação: \(score)"
-                gameOverLabelScore.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-30)
-                labelContainer.addChild(gameOverLabelScore)
-
+                //If you still have lifes
+                
+                
             
-          
+                
+                gameOver = true
+                 //Game Over Label Score
+                 gameOverLabelScore.fontName = "Helvetica"
+                 gameOverLabelScore.fontSize = 25
+                 gameOverLabelScore.text = "Pontuação: \(score)"
+                 gameOverLabelScore.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-30)
+                 labelContainer.addChild(gameOverLabelScore)
+                
+                 self.speed = 0 // set the speed in scene to 0. Everything
 
+                
+                
+                // LETS take 1 life off
+                life = Int(life) - 1
+                gameOverLabel.fontName = "Helvetica"
+                gameOverLabel.fontSize = 15
+                if life == 0 {
+                    gameOverLabel.text = "O jogo terminou. Clique na tela para reiniciar."
+                }else{
+                    gameOverLabel.text = "Colisão. Clique na tela para continuar."
+                }
+                gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+                labelContainer.addChild(gameOverLabel)
+                
+                lifeLabel.text = "Vidas: \(life)"
                 
                 
             }
@@ -290,8 +319,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bird.physicsBody?.velocity = CGVectorMake(0, 0)
         bird.physicsBody?.applyImpulse(CGVectorMake(0, 50)) // To increase the difficult of the game change this value
         } else{
-        
+            // IF LIFE IS EQUAL TO 0. THEN WE RESTART THE GAME
+            if life == 0{
             score = 0
+            life = 3
             scoreLabel.text = "Pontos: 0"
             bird.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
             bird.physicsBody?.velocity = CGVectorMake(0, 0)
@@ -302,6 +333,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gameOver = false
             makeBird()
             labelContainer.removeAllChildren()
+            }else{
+            
+                scoreLabel.text = "Pontos: \(score)"
+                bird.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+                bird.physicsBody?.velocity = CGVectorMake(0, 0)
+                movingObjects.removeAllChildren()
+                makeBackground()
+                self.speed = 1
+                
+                gameOver = false
+                makeBird()
+                labelContainer.removeAllChildren()
+
+            }
+            
         }
         
          }
