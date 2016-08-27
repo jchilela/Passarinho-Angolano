@@ -9,16 +9,27 @@
 import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    //var pauseButton = SKSpriteNode(imageNamed: "pause2.jpeg")
+    
+    //-------- HIGH SCORE ---------
+     var HighScoreLabel = SKLabelNode()
+     let defaults=NSUserDefaults()
+    //---------HIGH SCORE --------
+    
+    
+    var score = 0
+    
+    
     var life = 3
     
     
     var scoreLabel = SKLabelNode()
+    
     var lifeLabel = SKLabelNode()
     
     
-     var button = SKSpriteNode(imageNamed: "iniciar.png")
-    //var pauseButton = SKSpriteNode(imageNamed: "pause2.jpeg")
-    var score = 0
+    var button = SKSpriteNode(imageNamed: "iniciar.png")
+   
     
      var gameOverLabel = SKLabelNode()
     var gameOverLabelScore = SKLabelNode()
@@ -48,6 +59,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     var gameOver = false
+    
+    
+    
+    
     
     func makeBackground()  {
         //BACKGROUND IMAGE
@@ -79,8 +94,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     }
     
+    
+    
+    
     var isStarting = true
-    var firstTouch = true // Lets track if the user touch the screen for the first time but not in the button
+    var firstTouch = true // Lets track if the user touch the screen for the first time but not in the button start
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if firstTouch == true{
         
@@ -150,6 +168,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     
+    
+    
+    
     override func didMoveToView(view: SKView) {
         
         
@@ -187,9 +208,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         
+        //-------- High Score ---------------
+        
+        //SCORE LABEL
+        HighScoreLabel.fontName = "Helvetica"
+        HighScoreLabel.fontSize = 25
+        HighScoreLabel.text = "Recorde: 0"
+        HighScoreLabel.fontColor = UIColor.yellowColor()
+        HighScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 230, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
+        
+        self.addChild(HighScoreLabel)
+        
+       
+      
+        //---------------HIGH SCORE --------------------
+        let highscoreshow = defaults.integerForKey("highscore")
+        
+        HighScoreLabel.text="Record: \(highscoreshow)"
+        
+        
+        
         
         
     }
+    
+    
+    
+    
+    
     
     func makeBird(){
         // Add the pause button
@@ -198,7 +244,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
      //   pauseButton.name = "Pause"
        // self.addChild(pauseButton)
         
-        
+        if life < 0 {
+            life = 3
+           lifeLabel.text = "Vidas: \(life)"
+            
+        }
         
         //FOR THE ANIMATION
         //---- Texture is equal to image
@@ -292,14 +342,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     }
     
+    var isFirstScore = true
+    
     func didBeginContact(contact: SKPhysicsContact) {
         // If it collides with the object Gap do not finish the game
         if contact.bodyA.categoryBitMask == ColliderType.Gap.rawValue ||  contact.bodyB.categoryBitMask == ColliderType.Gap.rawValue {
         
-            score++
+             score++
              scoreLabel.text = "Pontos: \(score)"
             
-        
+          //--------------- HIGH SCORE --------------------
+           
+            
+            let highscore=defaults.integerForKey("highscore")
+            
+            if(score>highscore)
+            {
+                defaults.setInteger(score, forKey: "highscore")
+            }
+            let highscoreshow = defaults.integerForKey("highscore")
+            
+            HighScoreLabel.text="Record: \(highscoreshow)"
+            print("hhScore reported: \(HighScoreLabel.text)")
+            
+          //--------------- HIGH SCORE --------------------
+            
+            
         }else{
             
             if gameOver == false {
@@ -325,16 +393,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 life = Int(life) - 1
                 gameOverLabel.fontName = "Helvetica"
                 gameOverLabel.fontSize = 15
-                if life == 0 {
+               
+                if life < 0 {
                     gameOverLabel.text = "O jogo terminou. Clique na tela para reiniciar."
                 }else{
                     gameOverLabel.text = "Colisão. Clique na tela para continuar."
                 }
                 gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
                 labelContainer.addChild(gameOverLabel)
+                if life < 0 {
                 
-                lifeLabel.text = "Vidas: \(life)"
                 
+                }else{
+                    
+                    lifeLabel.text = "Vidas: \(life)"
+                
+                }
+                
+                
+                
+                
+                //Save the highst score
+             
+
                 
             }
         }
@@ -353,9 +434,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         } else{
             // IF LIFE IS EQUAL TO 0. THEN WE RESTART THE GAME
-            if life == 0{
+            if life < 0{
             score = 0
             life = 3
+            lifeLabel.text = "Vidas: \(life)"
             scoreLabel.text = "Pontos: 0"
             bird.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
             bird.physicsBody?.velocity = CGVectorMake(0, 0)
