@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E54E23A1D61E21D0019FFE0 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E2391D61E21D0019FFE0 /* bg.jpg */; };
-		5E54E23C1D61E3890019FFE0 /* bg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23B1D61E3890019FFE0 /* bg2.jpg */; };
 		5E54E2401D62621E0019FFE0 /* bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23F1D62621E0019FFE0 /* bkg.png */; };
+		5EA36F6E1D73365C00519335 /* 1cunene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA36F6D1D73365C00519335 /* 1cunene.jpg */; };
+		5EA36F701D7348EA00519335 /* 1cunene.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA36F6F1D7348EA00519335 /* 1cunene.png */; };
+		5EA36F721D7352FB00519335 /* NiveisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA36F711D7352FB00519335 /* NiveisViewController.swift */; };
 		5EADA15B1D5F5E3F0093201D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EADA15A1D5F5E3F0093201D /* AppDelegate.swift */; };
 		5EADA15D1D5F5E3F0093201D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA15C1D5F5E3F0093201D /* GameScene.sks */; };
 		5EADA15F1D5F5E3F0093201D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EADA15E1D5F5E3F0093201D /* GameScene.swift */; };
@@ -22,13 +23,19 @@
 		5EADA1771D5F62110093201D /* flappy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1721D5F62110093201D /* flappy2.png */; };
 		5EADA1781D5F62110093201D /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1731D5F62110093201D /* pipe1.png */; };
 		5EADA1791D5F62110093201D /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1741D5F62110093201D /* pipe2.png */; };
+		5EFD3B941D679FB20045030F /* pi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B911D679FB20045030F /* pi.png */; };
+		5EFD3B951D679FB20045030F /* bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B921D679FB20045030F /* bird1.png */; };
+		5EFD3B961D679FB20045030F /* bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B931D679FB20045030F /* bird2.png */; };
+		5EFD3B981D67A02A0045030F /* pi2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B971D67A02A0045030F /* pi2.png */; };
+		5EFD3B9C1D67A7B50045030F /* iniciar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B9B1D67A7B50045030F /* iniciar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E54E2391D61E21D0019FFE0 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
-		5E54E23B1D61E3890019FFE0 /* bg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg2.jpg; sourceTree = "<group>"; };
 		5E54E23F1D62621E0019FFE0 /* bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkg.png; sourceTree = "<group>"; };
-		5EADA1571D5F5E3F0093201D /* Flappy Bird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Bird.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA36F6D1D73365C00519335 /* 1cunene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1cunene.jpg; sourceTree = "<group>"; };
+		5EA36F6F1D7348EA00519335 /* 1cunene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1cunene.png; sourceTree = "<group>"; };
+		5EA36F711D7352FB00519335 /* NiveisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiveisViewController.swift; sourceTree = "<group>"; };
+		5EADA1571D5F5E3F0093201D /* Passarinho Angolano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Passarinho Angolano.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EADA15A1D5F5E3F0093201D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EADA15C1D5F5E3F0093201D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5EADA15E1D5F5E3F0093201D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -42,6 +49,11 @@
 		5EADA1721D5F62110093201D /* flappy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy2.png; sourceTree = "<group>"; };
 		5EADA1731D5F62110093201D /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe1.png; sourceTree = "<group>"; };
 		5EADA1741D5F62110093201D /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe2.png; sourceTree = "<group>"; };
+		5EFD3B911D679FB20045030F /* pi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi.png; sourceTree = "<group>"; };
+		5EFD3B921D679FB20045030F /* bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird1.png; sourceTree = "<group>"; };
+		5EFD3B931D679FB20045030F /* bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird2.png; sourceTree = "<group>"; };
+		5EFD3B971D67A02A0045030F /* pi2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi2.png; sourceTree = "<group>"; };
+		5EFD3B9B1D67A7B50045030F /* iniciar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iniciar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +78,7 @@
 		5EADA1581D5F5E3F0093201D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EADA1571D5F5E3F0093201D /* Flappy Bird.app */,
+				5EADA1571D5F5E3F0093201D /* Passarinho Angolano.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,9 +86,14 @@
 		5EADA1591D5F5E3F0093201D /* Flappy Bird */ = {
 			isa = PBXGroup;
 			children = (
+				5EA36F6F1D7348EA00519335 /* 1cunene.png */,
+				5EA36F6D1D73365C00519335 /* 1cunene.jpg */,
+				5EFD3B9B1D67A7B50045030F /* iniciar.png */,
+				5EFD3B971D67A02A0045030F /* pi2.png */,
+				5EFD3B911D679FB20045030F /* pi.png */,
+				5EFD3B921D679FB20045030F /* bird1.png */,
+				5EFD3B931D679FB20045030F /* bird2.png */,
 				5E54E23F1D62621E0019FFE0 /* bkg.png */,
-				5E54E23B1D61E3890019FFE0 /* bg2.jpg */,
-				5E54E2391D61E21D0019FFE0 /* bg.jpg */,
 				5EADA1701D5F62110093201D /* bg.png */,
 				5EADA1711D5F62110093201D /* flappy1.png */,
 				5EADA1721D5F62110093201D /* flappy2.png */,
@@ -87,6 +104,7 @@
 				5EADA15E1D5F5E3F0093201D /* GameScene.swift */,
 				5EADA1601D5F5E3F0093201D /* GameViewController.swift */,
 				5EADA1621D5F5E3F0093201D /* Main.storyboard */,
+				5EA36F711D7352FB00519335 /* NiveisViewController.swift */,
 				5EADA1651D5F5E3F0093201D /* Assets.xcassets */,
 				5EADA1671D5F5E3F0093201D /* LaunchScreen.storyboard */,
 				5EADA16A1D5F5E3F0093201D /* Info.plist */,
@@ -97,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5EADA1561D5F5E3F0093201D /* Flappy Bird */ = {
+		5EADA1561D5F5E3F0093201D /* Passarinho Angolano */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EADA16D1D5F5E3F0093201D /* Build configuration list for PBXNativeTarget "Flappy Bird" */;
+			buildConfigurationList = 5EADA16D1D5F5E3F0093201D /* Build configuration list for PBXNativeTarget "Passarinho Angolano" */;
 			buildPhases = (
 				5EADA1531D5F5E3F0093201D /* Sources */,
 				5EADA1541D5F5E3F0093201D /* Frameworks */,
@@ -109,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = "Flappy Bird";
+			name = "Passarinho Angolano";
 			productName = "Flappy Bird";
-			productReference = 5EADA1571D5F5E3F0093201D /* Flappy Bird.app */;
+			productReference = 5EADA1571D5F5E3F0093201D /* Passarinho Angolano.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,10 +144,11 @@
 				TargetAttributes = {
 					5EADA1561D5F5E3F0093201D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = AUYPXEFQ6H;
 					};
 				};
 			};
-			buildConfigurationList = 5EADA1521D5F5E3F0093201D /* Build configuration list for PBXProject "Flappy Bird" */;
+			buildConfigurationList = 5EADA1521D5F5E3F0093201D /* Build configuration list for PBXProject "Passarinho Angolano" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -142,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EADA1561D5F5E3F0093201D /* Flappy Bird */,
+				5EADA1561D5F5E3F0093201D /* Passarinho Angolano */,
 			);
 		};
 /* End PBXProject section */
@@ -152,14 +171,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E54E23A1D61E21D0019FFE0 /* bg.jpg in Resources */,
+				5EFD3B941D679FB20045030F /* pi.png in Resources */,
 				5EADA1771D5F62110093201D /* flappy2.png in Resources */,
 				5EADA1751D5F62110093201D /* bg.png in Resources */,
+				5EFD3B951D679FB20045030F /* bird1.png in Resources */,
+				5EFD3B981D67A02A0045030F /* pi2.png in Resources */,
 				5EADA15D1D5F5E3F0093201D /* GameScene.sks in Resources */,
 				5EADA1781D5F62110093201D /* pipe1.png in Resources */,
 				5EADA1691D5F5E3F0093201D /* LaunchScreen.storyboard in Resources */,
+				5EFD3B961D679FB20045030F /* bird2.png in Resources */,
+				5EA36F6E1D73365C00519335 /* 1cunene.jpg in Resources */,
 				5E54E2401D62621E0019FFE0 /* bkg.png in Resources */,
-				5E54E23C1D61E3890019FFE0 /* bg2.jpg in Resources */,
+				5EA36F701D7348EA00519335 /* 1cunene.png in Resources */,
+				5EFD3B9C1D67A7B50045030F /* iniciar.png in Resources */,
 				5EADA1791D5F62110093201D /* pipe2.png in Resources */,
 				5EADA1661D5F5E3F0093201D /* Assets.xcassets in Resources */,
 				5EADA1641D5F5E3F0093201D /* Main.storyboard in Resources */,
@@ -176,6 +200,7 @@
 			files = (
 				5EADA15F1D5F5E3F0093201D /* GameScene.swift in Sources */,
 				5EADA1611D5F5E3F0093201D /* GameViewController.swift in Sources */,
+				5EA36F721D7352FB00519335 /* NiveisViewController.swift in Sources */,
 				5EADA15B1D5F5E3F0093201D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,10 +314,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Flappy Bird/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.juliochilela.Flappy-Bird";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.juliochilela.passarinho-angolano";
+				PRODUCT_NAME = "Passarinho Angolano";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -300,17 +328,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Flappy Bird/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "info.juliochilela.Flappy-Bird";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "info.juliochilela.passarinho-angolano";
+				PRODUCT_NAME = "Passarinho Angolano";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5EADA1521D5F5E3F0093201D /* Build configuration list for PBXProject "Flappy Bird" */ = {
+		5EADA1521D5F5E3F0093201D /* Build configuration list for PBXProject "Passarinho Angolano" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EADA16B1D5F5E3F0093201D /* Debug */,
@@ -319,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EADA16D1D5F5E3F0093201D /* Build configuration list for PBXNativeTarget "Flappy Bird" */ = {
+		5EADA16D1D5F5E3F0093201D /* Build configuration list for PBXNativeTarget "Passarinho Angolano" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5EADA16E1D5F5E3F0093201D /* Debug */,

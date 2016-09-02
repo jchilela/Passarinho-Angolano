@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3k-xw-DBD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Flappy_Bird" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Passarinho_Angolano" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -23,5 +23,196 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Niveis View Controller-->
+        <scene sceneID="VpB-nL-7JP">
+            <objects>
+                <viewController id="t3k-xw-DBD" customClass="NiveisViewController" customModule="Passarinho_Angolano" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8l8-Aw-Poj"/>
+                        <viewControllerLayoutGuide type="bottom" id="yow-gD-Aso"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ljH-aN-Lgb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vb2-sa-BIE">
+                                <rect key="frame" x="20" y="196" width="71" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="1: Cunene"/>
+                                <connections>
+                                    <action selector="nivelChoosed:" destination="t3k-xw-DBD" eventType="touchUpInside" id="k4E-DP-oMQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bird1.png" translatesAutoresizingMaskIntoConstraints="NO" id="iNJ-Tw-4R8">
+                                <rect key="frame" x="130" y="32" width="112" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="iyQ-LX-H8b"/>
+                                    <constraint firstAttribute="width" constant="112" id="t3b-7u-5zp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Passarinho Abraão" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-cO-ewg">
+                                <rect key="frame" x="101" y="122" width="144" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="zu9-r6-j9G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Níveis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URI-G0-k16">
+                                <rect key="frame" x="152" y="162" width="47" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="CdQ-Op-V78"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cef-eQ-dmY">
+                                <rect key="frame" x="10" y="151" width="334" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="JZu-p9-hhm"/>
+                                    <constraint firstAttribute="height" constant="165" id="bAu-el-u5d"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se7-lt-qXd">
+                                <rect key="frame" x="96" y="196" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="2: Cuando Cub"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD1-xs-4aq">
+                                <rect key="frame" x="217" y="196" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="3: Huíla"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWo-gB-nkP">
+                                <rect key="frame" x="281" y="196" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="4: Namibe"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNI-Wx-Gyq">
+                                <rect key="frame" x="21" y="220" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="5: Moxico"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWg-dG-pRk">
+                                <rect key="frame" x="101" y="220" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="6: Bié"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdt-VC-NTd">
+                                <rect key="frame" x="218" y="220" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="7: Huambo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZk-SV-5Tx">
+                                <rect key="frame" x="286" y="220" width="71" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="8: Benguela"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yu-8n-SqY">
+                                <rect key="frame" x="20" y="247" width="71" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="9: Lunda Sul"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-Zu-Z4d">
+                                <rect key="frame" x="105" y="247" width="66" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="10: Lunda N"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqe-ll-JWb">
+                                <rect key="frame" x="279" y="247" width="78" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="12: Cuanza S"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPS-am-TiN">
+                                <rect key="frame" x="21" y="272" width="105" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="13: Cuanza Norte"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-96-MUq">
+                                <rect key="frame" x="117" y="272" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="15: Luanda"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta7-iP-zEh">
+                                <rect key="frame" x="213" y="272" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="16: Uíge"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwa-Mz-whc">
+                                <rect key="frame" x="99" y="294" width="78" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="18: Cabinda"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFb-RI-Cx9">
+                                <rect key="frame" x="213" y="247" width="62" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="11: Malange"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3u-Vf-7si">
+                                <rect key="frame" x="272" y="272" width="78" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="17: Zaire"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="eWg-dG-pRk" secondAttribute="trailing" constant="-140" id="0kF-Me-uP5"/>
+                            <constraint firstItem="T3u-Vf-7si" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-50" id="3Ge-2D-BhD"/>
+                            <constraint firstItem="oFb-RI-Cx9" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-70" id="56y-m8-lCF"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="6Yu-8n-SqY" secondAttribute="trailing" constant="-79" id="5Bf-CI-nZB"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="vb2-sa-BIE" secondAttribute="trailing" constant="-65" id="5Dd-ut-KtB"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="URI-G0-k16" secondAttribute="bottom" constant="3" id="5zS-eg-rja"/>
+                            <constraint firstItem="cZk-SV-5Tx" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-75" id="6Wy-BG-ovf"/>
+                            <constraint firstItem="URI-G0-k16" firstAttribute="top" secondItem="nGY-cO-ewg" secondAttribute="bottom" constant="6" id="6kT-jD-bYJ"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="mNI-Wx-Gyq" secondAttribute="trailing" constant="-65" id="7Zo-9A-g9N"/>
+                            <constraint firstItem="T3u-Vf-7si" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-75" id="AzM-3J-ZfZ"/>
+                            <constraint firstItem="KD1-xs-4aq" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-137" id="Djg-ac-Qeh"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="vb2-sa-BIE" secondAttribute="bottom" constant="-75" id="Ev7-Sk-Zl6"/>
+                            <constraint firstItem="iNJ-Tw-4R8" firstAttribute="centerX" secondItem="ljH-aN-Lgb" secondAttribute="centerX" id="IkH-Nl-a22"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="xwa-Mz-whc" secondAttribute="trailing" constant="-75" id="KZ8-IJ-phG"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="Tfb-Zu-Z4d" secondAttribute="trailing" constant="-172" id="KZt-XP-MbB"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="mNI-Wx-Gyq" secondAttribute="bottom" constant="-99" id="NvS-BT-UTj"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="centerX" secondItem="ljH-aN-Lgb" secondAttribute="centerX" id="PUt-tL-ulp"/>
+                            <constraint firstItem="nGY-cO-ewg" firstAttribute="centerX" secondItem="ljH-aN-Lgb" secondAttribute="centerX" id="PxO-SO-Nfv"/>
+                            <constraint firstItem="kiD-96-MUq" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-50" id="Qk1-2w-oCN"/>
+                            <constraint firstItem="Bqe-ll-JWb" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-75" id="Ryv-A7-uRZ"/>
+                            <constraint firstItem="zWo-gB-nkP" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-75" id="SJh-NY-zR9"/>
+                            <constraint firstItem="Ta7-iP-zEh" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-141" id="Vaa-9z-RdR"/>
+                            <constraint firstItem="hdt-VC-NTd" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-136" id="XIo-E9-KGv"/>
+                            <constraint firstItem="Bqe-ll-JWb" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-70" id="Zje-PD-iSd"/>
+                            <constraint firstItem="nGY-cO-ewg" firstAttribute="top" secondItem="iNJ-Tw-4R8" secondAttribute="bottom" constant="5" id="apg-EE-yew"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="cZk-SV-5Tx" secondAttribute="bottom" constant="-99" id="bVL-es-RLU"/>
+                            <constraint firstItem="Tfb-Zu-Z4d" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-70" id="c24-Ks-czi"/>
+                            <constraint firstItem="iNJ-Tw-4R8" firstAttribute="top" secondItem="8l8-Aw-Poj" secondAttribute="bottom" constant="12" id="crP-oD-qMj"/>
+                            <constraint firstItem="NPS-am-TiN" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-50" id="dnr-7o-gNI"/>
+                            <constraint firstItem="Ta7-iP-zEh" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-50" id="e2e-z2-mzO"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="eWg-dG-pRk" secondAttribute="bottom" constant="-99" id="eEm-kP-48H"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="NPS-am-TiN" secondAttribute="trailing" constant="-105" id="lRb-Fg-MdF"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="kiD-96-MUq" secondAttribute="trailing" constant="-167" id="lZJ-CX-cLd"/>
+                            <constraint firstItem="xwa-Mz-whc" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-30" id="lyz-Eh-5U9"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="hdt-VC-NTd" secondAttribute="bottom" constant="-99" id="nHG-Cb-MN6"/>
+                            <constraint firstItem="URI-G0-k16" firstAttribute="centerX" secondItem="ljH-aN-Lgb" secondAttribute="centerX" id="oYK-ht-giA"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="KD1-xs-4aq" secondAttribute="bottom" constant="-75" id="qmL-5e-I96"/>
+                            <constraint firstItem="6Yu-8n-SqY" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-70" id="tBy-qw-tMi"/>
+                            <constraint firstItem="oFb-RI-Cx9" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-141" id="uib-hy-h3L"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="zWo-gB-nkP" secondAttribute="bottom" constant="-75" id="uuk-lx-vzm"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="se7-lt-qXd" secondAttribute="trailing" constant="-191" id="ymy-WU-UIS"/>
+                            <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="se7-lt-qXd" secondAttribute="bottom" constant="-75" id="zB0-Ts-QwA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="jogar" id="que-ux-CFt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPX-B4-l2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637.5" y="521.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="bird1.png" width="83" height="60"/>
+    </resources>
 </document>

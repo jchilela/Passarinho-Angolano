@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5EADA1561D5F5E3F0093201D"
-               BuildableName = "Flappy Bird.app"
-               BlueprintName = "Flappy Bird"
-               ReferencedContainer = "container:Flappy Bird.xcodeproj">
+               BuildableName = "Passarinho Angolano.app"
+               BlueprintName = "Passarinho Angolano"
+               ReferencedContainer = "container:Passarinho Angolano.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5EADA1561D5F5E3F0093201D"
-            BuildableName = "Flappy Bird.app"
-            BlueprintName = "Flappy Bird"
-            ReferencedContainer = "container:Flappy Bird.xcodeproj">
+            BuildableName = "Passarinho Angolano.app"
+            BlueprintName = "Passarinho Angolano"
+            ReferencedContainer = "container:Passarinho Angolano.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5EADA1561D5F5E3F0093201D"
-            BuildableName = "Flappy Bird.app"
-            BlueprintName = "Flappy Bird"
-            ReferencedContainer = "container:Flappy Bird.xcodeproj">
+            BuildableName = "Passarinho Angolano.app"
+            BlueprintName = "Passarinho Angolano"
+            ReferencedContainer = "container:Passarinho Angolano.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5EADA1561D5F5E3F0093201D"
-            BuildableName = "Flappy Bird.app"
-            BlueprintName = "Flappy Bird"
-            ReferencedContainer = "container:Flappy Bird.xcodeproj">
+            BuildableName = "Passarinho Angolano.app"
+            BlueprintName = "Passarinho Angolano"
+            ReferencedContainer = "container:Passarinho Angolano.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

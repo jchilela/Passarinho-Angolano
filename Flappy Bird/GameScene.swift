@@ -66,7 +66,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func makeBackground()  {
         //BACKGROUND IMAGE
-        let bgTexture = SKTexture(imageNamed: "bkg.png")
+        let bgTexture = SKTexture(imageNamed: "1cunene.png")
         
         
         let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
@@ -190,6 +190,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.fontName = "Helvetica"
         scoreLabel.fontSize = 25
         scoreLabel.text = "Pontos: 0"
+        scoreLabel.zPosition = 100
         scoreLabel.fontColor = UIColor.yellowColor()
         scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
         
@@ -200,6 +201,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        lifeLabel.fontName = "Helvetica"
         lifeLabel.fontSize = 25
         lifeLabel.text = "Vidas: \(life)"
+        lifeLabel.zPosition = 100
         lifeLabel.fontColor = UIColor.yellowColor()
         lifeLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 110, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
         
@@ -214,6 +216,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         HighScoreLabel.fontName = "Helvetica"
         HighScoreLabel.fontSize = 25
         HighScoreLabel.text = "Recorde: 0"
+        HighScoreLabel.zPosition = 100
         HighScoreLabel.fontColor = UIColor.yellowColor()
         HighScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 230, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
         
@@ -382,6 +385,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                  gameOverLabelScore.fontName = "Helvetica"
                  gameOverLabelScore.fontSize = 25
                  gameOverLabelScore.text = "Pontuação: \(score)"
+                gameOverLabelScore.zPosition = 100
                  gameOverLabelScore.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-30)
                  labelContainer.addChild(gameOverLabelScore)
                 
@@ -393,6 +397,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 life = Int(life) - 1
                 gameOverLabel.fontName = "Helvetica"
                 gameOverLabel.fontSize = 15
+                gameOverLabel.zPosition = 100
                
                 if life < 0 {
                     gameOverLabel.text = "O jogo terminou. Clique na tela para reiniciar."
