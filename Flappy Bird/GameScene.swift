@@ -7,8 +7,12 @@
 //
 
 import SpriteKit
+import UIKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+     var viewController: UIViewController?
+    
     //var pauseButton = SKSpriteNode(imageNamed: "pause2.jpeg")
     
     //-------- HIGH SCORE ---------
@@ -29,6 +33,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     var button = SKSpriteNode(imageNamed: "iniciar.png")
+    //Nivel ________
+    var buttonAlterarNivel = SKSpriteNode(imageNamed: "nivel.png")
+    var nivelLabel = SKLabelNode()
+    // _____________
    
     
      var gameOverLabel = SKLabelNode()
@@ -65,9 +73,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func makeBackground()  {
+        //Loading the chosen level
+        let level = defaults.integerForKey("level")
+        
+        //LEVEL 1______________________________
+        
+        if level == 1{
+        
+       
         //BACKGROUND IMAGE
         let bgTexture = SKTexture(imageNamed: "1cunene.png")
-        
+         
         
         let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
         
@@ -90,6 +106,65 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             movingObjects.addChild(bg)
             
+        }
+        } else if level == 2{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "bkg.png")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 3{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "2huila.png")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
         }
 
     }
@@ -162,6 +237,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             }
             
+            
+            
+            //IF NIVEL IS CLICKED
+            
+            for touch: AnyObject in touches {
+                // Get the location of the touch in this scene
+                let location = touch.locationInNode(self)
+                // Check if the location of the touch is within the button's bounds
+                if buttonAlterarNivel.containsPoint(location){
+             
+                // Call the nivel segue
+                    viewController?.performSegueWithIdentifier("nivel", sender: self)
+                }
+            }
+
+            
+            
+            
+            
+            
+            
+            
         }
         
     }
@@ -174,10 +271,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMoveToView(view: SKView) {
         
         
+        
+        
                // Put it in the center of the scene
         button.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.size.height - self.frame.size.height/2);
         button.name = "Click me"
         self.addChild(button)
+        
+        
+        // Add button to change the level
+        buttonAlterarNivel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 300, CGRectGetMidY(self.frame) - self.frame.size.height/2 + 7 + self.frame.size.height/7)
+        buttonAlterarNivel.name = "Level"
+        self.addChild(buttonAlterarNivel)
+        
+        //Level LABEL
+        nivelLabel.fontName = "Helvetica"
+        nivelLabel.fontSize = 18
+        nivelLabel.text =  String(defaults.integerForKey("level"))
+        nivelLabel.zPosition = 100
+        nivelLabel.fontColor = UIColor.yellowColor()
+        nivelLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 345, CGRectGetMidY(self.frame) - self.frame.size.height/2  + self.frame.size.height/7)
+        
+        self.addChild(nivelLabel)
+        
+        
+        
+        
+        
         
         
         self.physicsWorld.contactDelegate = self
@@ -188,22 +308,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //SCORE LABEL
         scoreLabel.fontName = "Helvetica"
-        scoreLabel.fontSize = 25
+        scoreLabel.fontSize = 18
         scoreLabel.text = "Pontos: 0"
         scoreLabel.zPosition = 100
         scoreLabel.fontColor = UIColor.yellowColor()
-        scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
+        scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 - 10, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
         
         self.addChild(scoreLabel)
         
         //LIFE LABEL
         
        lifeLabel.fontName = "Helvetica"
-        lifeLabel.fontSize = 25
+        lifeLabel.fontSize = 18
         lifeLabel.text = "Vidas: \(life)"
         lifeLabel.zPosition = 100
         lifeLabel.fontColor = UIColor.yellowColor()
-        lifeLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 110, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
+        lifeLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 100, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
         
         self.addChild(lifeLabel)
      
@@ -214,11 +334,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //SCORE LABEL
         HighScoreLabel.fontName = "Helvetica"
-        HighScoreLabel.fontSize = 25
+        HighScoreLabel.fontSize = 18
         HighScoreLabel.text = "Recorde: 0"
         HighScoreLabel.zPosition = 100
         HighScoreLabel.fontColor = UIColor.yellowColor()
-        HighScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 230, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
+        HighScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 185, CGRectGetMidY(self.frame) - self.frame.size.height/2 + self.frame.size.height/7)
         
         self.addChild(HighScoreLabel)
         
