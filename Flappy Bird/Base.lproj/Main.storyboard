@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3k-xw-DBD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s04-9E-xHb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -21,11 +22,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="t3k-xw-DBD" kind="show" identifier="nivel" id="fJd-t6-iHc"/>
+                        <segue destination="s04-9E-xHb" kind="show" identifier="rewords" id="gtT-za-Lpr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277.5" y="-19.5"/>
+            <point key="canvasLocation" x="459.5" y="-50.5"/>
         </scene>
         <!--Niveis View Controller-->
         <scene sceneID="VpB-nL-7JP">
@@ -191,6 +193,14 @@
                                     <action selector="nivelChoosed:" destination="t3k-xw-DBD" eventType="touchUpInside" id="XU7-1z-AV1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-OX-MlL">
+                                <rect key="frame" x="20" y="294" width="78" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="17: Bengo"/>
+                                <connections>
+                                    <action selector="nivelChoosed:" destination="t3k-xw-DBD" eventType="touchUpInside" id="VrC-om-LFU"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFb-RI-Cx9">
                                 <rect key="frame" x="213" y="247" width="62" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -207,14 +217,13 @@
                                     <action selector="nivelChoosed:" destination="t3k-xw-DBD" eventType="touchUpInside" id="hha-D3-KQ7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="17" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-OX-MlL">
-                                <rect key="frame" x="20" y="294" width="78" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <state key="normal" title="17: Bengo"/>
-                                <connections>
-                                    <action selector="nivelChoosed:" destination="t3k-xw-DBD" eventType="touchUpInside" id="VrC-om-LFU"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Angola.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="87A-j8-lUo">
+                                <rect key="frame" x="318" y="326" width="23" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="f6P-eA-ilW"/>
+                                    <constraint firstAttribute="width" constant="23" id="lUJ-Ig-kUL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -242,6 +251,7 @@
                             <constraint firstItem="zWo-gB-nkP" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-75" id="SJh-NY-zR9"/>
                             <constraint firstItem="Ta7-iP-zEh" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-141" id="Vaa-9z-RdR"/>
                             <constraint firstItem="hdt-VC-NTd" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-136" id="XIo-E9-KGv"/>
+                            <constraint firstItem="87A-j8-lUo" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-24" id="YBr-Mm-7zK"/>
                             <constraint firstItem="Bqe-ll-JWb" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-70" id="Zje-PD-iSd"/>
                             <constraint firstItem="nGY-cO-ewg" firstAttribute="top" secondItem="iNJ-Tw-4R8" secondAttribute="bottom" constant="5" id="apg-EE-yew"/>
                             <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="cZk-SV-5Tx" secondAttribute="bottom" constant="-99" id="bVL-es-RLU"/>
@@ -253,6 +263,7 @@
                             <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="NPS-am-TiN" secondAttribute="trailing" constant="-105" id="lRb-Fg-MdF"/>
                             <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="kiD-96-MUq" secondAttribute="trailing" constant="-167" id="lZJ-CX-cLd"/>
                             <constraint firstItem="xwa-Mz-whc" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-30" id="lyz-Eh-5U9"/>
+                            <constraint firstItem="87A-j8-lUo" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-26" id="n2E-ms-6Bj"/>
                             <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="hdt-VC-NTd" secondAttribute="bottom" constant="-99" id="nHG-Cb-MN6"/>
                             <constraint firstItem="URI-G0-k16" firstAttribute="centerX" secondItem="ljH-aN-Lgb" secondAttribute="centerX" id="oYK-ht-giA"/>
                             <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="KD1-xs-4aq" secondAttribute="bottom" constant="-75" id="qmL-5e-I96"/>
@@ -289,10 +300,140 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPX-B4-l2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="859.5" y="-74.5"/>
+            <point key="canvasLocation" x="814.5" y="-84.5"/>
+        </scene>
+        <!--RewordsUI View Controller-->
+        <scene sceneID="xJp-bJ-g7S">
+            <objects>
+                <viewController id="s04-9E-xHb" customClass="RewordsUIViewController" customModule="Passarinho_Angolano" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NKi-pN-kPh"/>
+                        <viewControllerLayoutGuide type="bottom" id="IqD-7j-KiS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1XE-ce-kvf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-1P-jmg">
+                                <rect key="frame" x="59" y="101" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="EZN-2O-1eS"/>
+                                    <constraint firstAttribute="height" constant="21" id="itZ-Rb-Xn1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Angola.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="BIR-KE-0Bg">
+                                <rect key="frame" x="59" y="60" width="76" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="PIJ-3I-mPW"/>
+                                    <constraint firstAttribute="height" constant="39" id="vc7-lT-Pw4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzd-RA-Uxj">
+                                <rect key="frame" x="59" y="181" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="DZr-xa-ktU"/>
+                                    <constraint firstAttribute="height" constant="21" id="bXB-zf-Tb2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bird1.png" translatesAutoresizingMaskIntoConstraints="NO" id="6lj-gy-2hO">
+                                <rect key="frame" x="59" y="130" width="76" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="IGv-S8-RhB"/>
+                                    <constraint firstAttribute="width" constant="76" id="jRM-lf-xIa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWm-JG-S3d">
+                                <rect key="frame" x="66" y="260" width="193" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="193" id="0zt-E6-THT"/>
+                                    <constraint firstAttribute="width" constant="193" id="52q-1A-MYf"/>
+                                    <constraint firstAttribute="height" constant="21" id="lAC-WL-DLD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="pys-At-f9b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bababús" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRy-8J-cvL">
+                                <rect key="frame" x="131" y="20" width="160" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Oic-GO-0np"/>
+                                    <constraint firstAttribute="height" constant="21" id="Y3e-w4-Zpv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bird2.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Ci-bN-dWw">
+                                <rect key="frame" x="59" y="210" width="76" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="3kj-xb-t89"/>
+                                    <constraint firstAttribute="width" constant="76" id="xw9-ii-j8w"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-gh-g3O">
+                                <rect key="frame" x="126" y="289" width="98" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="C3A-mf-BDL"/>
+                                    <constraint firstAttribute="height" constant="30" id="uAj-gN-9M3"/>
+                                </constraints>
+                                <state key="normal" title="Ir para níveis"/>
+                                <connections>
+                                    <action selector="niveis:" destination="s04-9E-xHb" eventType="touchUpInside" id="QX3-g0-5Kq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Ci-bN-dWw" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="2iu-jA-1EU"/>
+                            <constraint firstItem="5RE-gh-g3O" firstAttribute="top" secondItem="FWm-JG-S3d" secondAttribute="bottom" constant="8" id="FfU-Kn-Lss"/>
+                            <constraint firstItem="BIR-KE-0Bg" firstAttribute="top" secondItem="rRy-8J-cvL" secondAttribute="bottom" constant="19" id="GJR-Ke-XBl"/>
+                            <constraint firstItem="2Ci-bN-dWw" firstAttribute="top" secondItem="hzd-RA-Uxj" secondAttribute="bottom" constant="8" id="Iw8-se-6FY"/>
+                            <constraint firstItem="BIR-KE-0Bg" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="K6l-mf-Ny5"/>
+                            <constraint firstItem="hzd-RA-Uxj" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="NGm-IF-HqT"/>
+                            <constraint firstItem="Nh0-1P-jmg" firstAttribute="top" secondItem="BIR-KE-0Bg" secondAttribute="bottom" constant="2" id="ao8-Jl-pdm"/>
+                            <constraint firstItem="FWm-JG-S3d" firstAttribute="top" secondItem="2Ci-bN-dWw" secondAttribute="bottom" constant="13" id="bou-I7-bk3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rRy-8J-cvL" secondAttribute="trailing" constant="103" id="cMK-Hr-4tU"/>
+                            <constraint firstItem="Nh0-1P-jmg" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="dC0-bH-3cX"/>
+                            <constraint firstItem="hzd-RA-Uxj" firstAttribute="top" secondItem="6lj-gy-2hO" secondAttribute="bottom" constant="8" id="eMH-0S-duo"/>
+                            <constraint firstItem="6lj-gy-2hO" firstAttribute="top" secondItem="Nh0-1P-jmg" secondAttribute="bottom" constant="8" id="fBJ-DA-Evu"/>
+                            <constraint firstItem="rRy-8J-cvL" firstAttribute="top" secondItem="NKi-pN-kPh" secondAttribute="bottom" id="frN-s1-it2"/>
+                            <constraint firstItem="FWm-JG-S3d" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="fwE-nM-2Ml"/>
+                            <constraint firstItem="rRy-8J-cvL" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="gHv-0A-8dC"/>
+                            <constraint firstItem="BIR-KE-0Bg" firstAttribute="top" secondItem="rRy-8J-cvL" secondAttribute="bottom" constant="19" id="jCw-wJ-CZK"/>
+                            <constraint firstItem="rRy-8J-cvL" firstAttribute="leading" secondItem="1XE-ce-kvf" secondAttribute="leadingMargin" constant="111" id="nnc-DH-TaY"/>
+                            <constraint firstItem="6lj-gy-2hO" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="reI-Uk-ZEE"/>
+                            <constraint firstItem="5RE-gh-g3O" firstAttribute="centerX" secondItem="1XE-ce-kvf" secondAttribute="centerX" id="rgf-nJ-jkJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bababu1" destination="BIR-KE-0Bg" id="TVi-hP-lHz"/>
+                        <outlet property="bababu2" destination="6lj-gy-2hO" id="VtT-VT-pBs"/>
+                        <outlet property="bababu3" destination="2Ci-bN-dWw" id="LYH-6q-lj0"/>
+                        <outlet property="label1" destination="Nh0-1P-jmg" id="Aqb-o1-jkG"/>
+                        <outlet property="label2" destination="hzd-RA-Uxj" id="Ldo-yL-so6"/>
+                        <outlet property="label3" destination="FWm-JG-S3d" id="K4H-sn-auw"/>
+                        <segue destination="t3k-xw-DBD" kind="show" identifier="backToLevels" id="eYf-qW-Qc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUo-8h-ze9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242.5" y="-77.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Angola.JPG" width="212" height="111"/>
         <image name="bird1.png" width="83" height="60"/>
+        <image name="bird2.png" width="83" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eYf-qW-Qc6"/>
+    </inferredMetricsTieBreakers>
 </document>

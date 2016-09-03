@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E54E2401D62621E0019FFE0 /* bkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23F1D62621E0019FFE0 /* bkg.png */; };
+		5E54E2401D62621E0019FFE0 /* 2huila.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23F1D62621E0019FFE0 /* 2huila.png */; };
 		5EA36F6E1D73365C00519335 /* 1cunene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA36F6D1D73365C00519335 /* 1cunene.jpg */; };
 		5EA36F701D7348EA00519335 /* 1cunene.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA36F6F1D7348EA00519335 /* 1cunene.png */; };
 		5EA36F721D7352FB00519335 /* NiveisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA36F711D7352FB00519335 /* NiveisViewController.swift */; };
@@ -23,6 +23,14 @@
 		5EADA1771D5F62110093201D /* flappy2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1721D5F62110093201D /* flappy2.png */; };
 		5EADA1781D5F62110093201D /* pipe1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1731D5F62110093201D /* pipe1.png */; };
 		5EADA1791D5F62110093201D /* pipe2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EADA1741D5F62110093201D /* pipe2.png */; };
+		5EBB30B41D79FA79003B7335 /* nivel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30B31D79FA79003B7335 /* nivel.png */; };
+		5EBB30B91D7A342D003B7335 /* perdeu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30B61D7A342D003B7335 /* perdeu.mp3 */; };
+		5EBB30BC1D7A3C1E003B7335 /* ponto.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30BB1D7A3C1E003B7335 /* ponto.mp3 */; };
+		5EBB30BE1D7A4560003B7335 /* irJogando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30BD1D7A4560003B7335 /* irJogando.mp3 */; };
+		5EBB30C11D7A507F003B7335 /* irJogando2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30BF1D7A507E003B7335 /* irJogando2.mp3 */; };
+		5EBB30C21D7A507F003B7335 /* irJogando3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30C01D7A507E003B7335 /* irJogando3.mp3 */; };
+		5EBB30C41D7A69C6003B7335 /* Angola.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30C31D7A69C6003B7335 /* Angola.JPG */; };
+		5EBB30C61D7A6EED003B7335 /* RewordsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB30C51D7A6EED003B7335 /* RewordsUIViewController.swift */; };
 		5EFD3B941D679FB20045030F /* pi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B911D679FB20045030F /* pi.png */; };
 		5EFD3B951D679FB20045030F /* bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B921D679FB20045030F /* bird1.png */; };
 		5EFD3B961D679FB20045030F /* bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B931D679FB20045030F /* bird2.png */; };
@@ -31,7 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E54E23F1D62621E0019FFE0 /* bkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkg.png; sourceTree = "<group>"; };
+		5E54E23F1D62621E0019FFE0 /* 2huila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2huila.png; sourceTree = "<group>"; };
 		5EA36F6D1D73365C00519335 /* 1cunene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1cunene.jpg; sourceTree = "<group>"; };
 		5EA36F6F1D7348EA00519335 /* 1cunene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1cunene.png; sourceTree = "<group>"; };
 		5EA36F711D7352FB00519335 /* NiveisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiveisViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		5EADA1721D5F62110093201D /* flappy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flappy2.png; sourceTree = "<group>"; };
 		5EADA1731D5F62110093201D /* pipe1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe1.png; sourceTree = "<group>"; };
 		5EADA1741D5F62110093201D /* pipe2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe2.png; sourceTree = "<group>"; };
+		5EBB30B31D79FA79003B7335 /* nivel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nivel.png; sourceTree = "<group>"; };
+		5EBB30B61D7A342D003B7335 /* perdeu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = perdeu.mp3; sourceTree = "<group>"; };
+		5EBB30BB1D7A3C1E003B7335 /* ponto.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ponto.mp3; sourceTree = "<group>"; };
+		5EBB30BD1D7A4560003B7335 /* irJogando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = irJogando.mp3; sourceTree = "<group>"; };
+		5EBB30BF1D7A507E003B7335 /* irJogando2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = irJogando2.mp3; sourceTree = "<group>"; };
+		5EBB30C01D7A507E003B7335 /* irJogando3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = irJogando3.mp3; sourceTree = "<group>"; };
+		5EBB30C31D7A69C6003B7335 /* Angola.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Angola.JPG; sourceTree = "<group>"; };
+		5EBB30C51D7A6EED003B7335 /* RewordsUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewordsUIViewController.swift; sourceTree = "<group>"; };
 		5EFD3B911D679FB20045030F /* pi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi.png; sourceTree = "<group>"; };
 		5EFD3B921D679FB20045030F /* bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird1.png; sourceTree = "<group>"; };
 		5EFD3B931D679FB20045030F /* bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird2.png; sourceTree = "<group>"; };
@@ -86,6 +102,13 @@
 		5EADA1591D5F5E3F0093201D /* Flappy Bird */ = {
 			isa = PBXGroup;
 			children = (
+				5EBB30C31D7A69C6003B7335 /* Angola.JPG */,
+				5EBB30BF1D7A507E003B7335 /* irJogando2.mp3 */,
+				5EBB30C01D7A507E003B7335 /* irJogando3.mp3 */,
+				5EBB30BD1D7A4560003B7335 /* irJogando.mp3 */,
+				5EBB30BB1D7A3C1E003B7335 /* ponto.mp3 */,
+				5EBB30B61D7A342D003B7335 /* perdeu.mp3 */,
+				5EBB30B31D79FA79003B7335 /* nivel.png */,
 				5EA36F6F1D7348EA00519335 /* 1cunene.png */,
 				5EA36F6D1D73365C00519335 /* 1cunene.jpg */,
 				5EFD3B9B1D67A7B50045030F /* iniciar.png */,
@@ -93,7 +116,7 @@
 				5EFD3B911D679FB20045030F /* pi.png */,
 				5EFD3B921D679FB20045030F /* bird1.png */,
 				5EFD3B931D679FB20045030F /* bird2.png */,
-				5E54E23F1D62621E0019FFE0 /* bkg.png */,
+				5E54E23F1D62621E0019FFE0 /* 2huila.png */,
 				5EADA1701D5F62110093201D /* bg.png */,
 				5EADA1711D5F62110093201D /* flappy1.png */,
 				5EADA1721D5F62110093201D /* flappy2.png */,
@@ -104,6 +127,7 @@
 				5EADA15E1D5F5E3F0093201D /* GameScene.swift */,
 				5EADA1601D5F5E3F0093201D /* GameViewController.swift */,
 				5EADA1621D5F5E3F0093201D /* Main.storyboard */,
+				5EBB30C51D7A6EED003B7335 /* RewordsUIViewController.swift */,
 				5EA36F711D7352FB00519335 /* NiveisViewController.swift */,
 				5EADA1651D5F5E3F0093201D /* Assets.xcassets */,
 				5EADA1671D5F5E3F0093201D /* LaunchScreen.storyboard */,
@@ -171,19 +195,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EBB30B41D79FA79003B7335 /* nivel.png in Resources */,
 				5EFD3B941D679FB20045030F /* pi.png in Resources */,
 				5EADA1771D5F62110093201D /* flappy2.png in Resources */,
 				5EADA1751D5F62110093201D /* bg.png in Resources */,
 				5EFD3B951D679FB20045030F /* bird1.png in Resources */,
+				5EBB30C11D7A507F003B7335 /* irJogando2.mp3 in Resources */,
 				5EFD3B981D67A02A0045030F /* pi2.png in Resources */,
 				5EADA15D1D5F5E3F0093201D /* GameScene.sks in Resources */,
 				5EADA1781D5F62110093201D /* pipe1.png in Resources */,
+				5EBB30BC1D7A3C1E003B7335 /* ponto.mp3 in Resources */,
+				5EBB30B91D7A342D003B7335 /* perdeu.mp3 in Resources */,
+				5EBB30BE1D7A4560003B7335 /* irJogando.mp3 in Resources */,
+				5EBB30C21D7A507F003B7335 /* irJogando3.mp3 in Resources */,
 				5EADA1691D5F5E3F0093201D /* LaunchScreen.storyboard in Resources */,
 				5EFD3B961D679FB20045030F /* bird2.png in Resources */,
 				5EA36F6E1D73365C00519335 /* 1cunene.jpg in Resources */,
-				5E54E2401D62621E0019FFE0 /* bkg.png in Resources */,
+				5E54E2401D62621E0019FFE0 /* 2huila.png in Resources */,
 				5EA36F701D7348EA00519335 /* 1cunene.png in Resources */,
 				5EFD3B9C1D67A7B50045030F /* iniciar.png in Resources */,
+				5EBB30C41D7A69C6003B7335 /* Angola.JPG in Resources */,
 				5EADA1791D5F62110093201D /* pipe2.png in Resources */,
 				5EADA1661D5F5E3F0093201D /* Assets.xcassets in Resources */,
 				5EADA1641D5F5E3F0093201D /* Main.storyboard in Resources */,
@@ -198,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EBB30C61D7A6EED003B7335 /* RewordsUIViewController.swift in Sources */,
 				5EADA15F1D5F5E3F0093201D /* GameScene.swift in Sources */,
 				5EADA1611D5F5E3F0093201D /* GameViewController.swift in Sources */,
 				5EA36F721D7352FB00519335 /* NiveisViewController.swift in Sources */,
