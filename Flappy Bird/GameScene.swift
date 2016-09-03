@@ -8,10 +8,28 @@
 
 import SpriteKit
 import UIKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    
+    
+    var entreDezeVinte = true // PARA TOCAR O SOM UMA VEZ
+    var maiorQueVinte = true // Para tocar o som uma vez
+    
      var viewController: UIViewController?
+    
+    var perdeu =  NSBundle.mainBundle().pathForResource("perdeu", ofType: "mp3")!
+    
+    var ponto =  NSBundle.mainBundle().pathForResource("ponto", ofType: "mp3")!
+    
+    
+    var irJogando =  NSBundle.mainBundle().pathForResource("irJogando3", ofType: "mp3")!
+    
+    
+    
+    
+ 
     
     //var pauseButton = SKSpriteNode(imageNamed: "pause2.jpeg")
     
@@ -76,7 +94,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Loading the chosen level
         let level = defaults.integerForKey("level")
         
-        //LEVEL 1______________________________
         
         if level == 1{
         
@@ -265,13 +282,54 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     
-    
+    var audioPlayerPerdeu = AVAudioPlayer()
+    var audioPlayerPonto = AVAudioPlayer()
+    var audioPlayerIrJogando = AVAudioPlayer()
     
     
     override func didMoveToView(view: SKView) {
         
         
+        do {
+            
+            
+            try audioPlayerPonto = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: ponto))
+            
+            
+            
+        } catch {
+            
+            //Process the error here
+            
+        }
         
+        do {
+            
+            
+            try audioPlayerPerdeu = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: perdeu))
+            
+            
+            
+        } catch {
+            
+            //Process the error here
+            
+        }
+        
+        do {
+            
+            
+            try audioPlayerIrJogando = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: irJogando))
+            
+            
+            
+        } catch {
+            
+            //Process the error here
+            
+        }
+        
+   
         
                // Put it in the center of the scene
         button.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.size.height - self.frame.size.height/2);
@@ -403,6 +461,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         movingObjects.addChild(bird)
         // -----This is how you add a image to the screen
+        audioPlayerIrJogando.numberOfLoops = -1
+        audioPlayerIrJogando.play()
+        
     
     }
     
@@ -466,6 +527,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     var isFirstScore = true
+   
+    
+ 
+    
+    
+    
+    
     
     func didBeginContact(contact: SKPhysicsContact) {
         // If it collides with the object Gap do not finish the game
@@ -473,6 +541,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
              score++
              scoreLabel.text = "Pontos: \(score)"
+            
+           
+            
+            //Play the music reducing the time
+            audioPlayerPerdeu.stop()
+            audioPlayerIrJogando.stop()
+            audioPlayerPonto.play()
+            audioPlayerIrJogando.numberOfLoops = -1
+            audioPlayerIrJogando.play()
+            
+            //timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkTime", userInfo: nil, repeats: true)
+
+            
             
           //--------------- HIGH SCORE --------------------
            
@@ -521,8 +602,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                
                 if life < 0 {
                     gameOverLabel.text = "O jogo terminou. Clique na tela para reiniciar."
+                    audioPlayerIrJogando.stop()
+                    audioPlayerPonto.stop()
+                    audioPlayerPerdeu.play()
+                    entreDezeVinte = true
+                    maiorQueVinte = true
                 }else{
                     gameOverLabel.text = "Colisão. Clique na tela para continuar."
+                    //Play the music reducing the time
+                    audioPlayerIrJogando.stop()
+                    audioPlayerPonto.stop()
+                    audioPlayerPerdeu.play()
+                    
                 }
                 gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
                 labelContainer.addChild(gameOverLabel)
@@ -548,8 +639,55 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
        
     }
 
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        
+        //--- I want to change the music all the time that I increase my score
+        if score > 10 && score < 20 && entreDezeVinte == true {
+            irJogando =  NSBundle.mainBundle().pathForResource("irJogando", ofType: "mp3")!
+            do {
+                
+                
+                try audioPlayerIrJogando = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: irJogando))
+                
+                
+                
+            } catch {
+                
+                //Process the error here
+                
+            }
+            
+            audioPlayerIrJogando.play()
+            entreDezeVinte = false
+        }else if score > 20 && maiorQueVinte == true {
+            irJogando =  NSBundle.mainBundle().pathForResource("irJogando2", ofType: "mp3")!
+            do {
+                
+                
+                try audioPlayerIrJogando = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: irJogando))
+                
+                
+                
+            } catch {
+                
+                //Process the error here
+                
+            }
+            
+            audioPlayerIrJogando.play()
+            maiorQueVinte = false
+        }
+     
+        
+        
+        //-----------------------------------
+        
+        
+        
+        
+        
+        
         if gameOver == false {
             
             bird.physicsBody?.velocity = CGVectorMake(0, 0)
@@ -558,8 +696,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
         } else{
+            audioPlayerIrJogando.stop()
+            audioPlayerPonto.stop()
+            audioPlayerPerdeu.stop()
+            audioPlayerIrJogando.currentTime = 0.0
+            audioPlayerPonto.currentTime = 0.0
+            audioPlayerPerdeu.currentTime = 0.0
+          
+            
+            
             // IF LIFE IS EQUAL TO 0. THEN WE RESTART THE GAME
             if life < 0{
+                
+                
+                
             score = 0
             life = 3
             lifeLabel.text = "Vidas: \(life)"

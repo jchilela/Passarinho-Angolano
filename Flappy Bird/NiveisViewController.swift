@@ -111,7 +111,7 @@ class NiveisViewController: UIViewController {
         
         
       
-            cunene.enabled = false
+            cunene.enabled = true
     
             cuandoCubango.enabled = false
             
