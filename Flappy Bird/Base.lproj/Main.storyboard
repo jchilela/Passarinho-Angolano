@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s04-9E-xHb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t3k-xw-DBD">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -336,7 +336,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Angola.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="BIR-KE-0Bg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BIR-KE-0Bg">
                                 <rect key="frame" x="59" y="60" width="76" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="PIJ-3I-mPW"/>
@@ -353,7 +353,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bird1.png" translatesAutoresizingMaskIntoConstraints="NO" id="6lj-gy-2hO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lj-gy-2hO">
                                 <rect key="frame" x="59" y="130" width="76" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="IGv-S8-RhB"/>
@@ -382,7 +382,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bird2.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Ci-bN-dWw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ci-bN-dWw">
                                 <rect key="frame" x="59" y="210" width="76" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="3kj-xb-t89"/>
@@ -443,10 +443,9 @@
     <resources>
         <image name="Angola.JPG" width="212" height="111"/>
         <image name="bird1.png" width="83" height="60"/>
-        <image name="bird2.png" width="83" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gtT-za-Lpr"/>
-        <segue reference="fJd-t6-iHc"/>
+        <segue reference="Q9X-p6-hi6"/>
+        <segue reference="eYf-qW-Qc6"/>
     </inferredMetricsTieBreakers>
 </document>

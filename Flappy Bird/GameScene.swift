@@ -574,7 +574,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         print("RNUNber\(RNumber)")
         print("RNUNber2\(RNumber2)")
         
-        var milhoTexture = SKTexture(imageNamed: "flappy1.png")
+        var milhoTexture = SKTexture(imageNamed: "milho.png")
         var milho = SKSpriteNode(texture: milhoTexture)
         milho.position = CGPoint(x: CGRectGetMidX(self.frame) + CGFloat(RNumber) + self.frame.size.width, y: CGRectGetMidY(self.frame) - CGFloat(RNumber2))
   

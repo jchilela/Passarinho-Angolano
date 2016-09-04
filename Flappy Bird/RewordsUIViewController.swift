@@ -43,6 +43,14 @@ class RewordsUIViewController: UIViewController {
         label2.text = "Gingubas: \(ginguba)"
         label3.text = "Cafés: \(cafe)"
         
+        let image = UIImage(named: "milho.png")
+        bababu1.image = image
+        let ginguba1 = UIImage(named: "ginguba.png")
+        bababu2.image = ginguba1
+        let cafe1 = UIImage(named: "cafe.png")
+        bababu3.image = cafe1
+
+        
 
         
         
