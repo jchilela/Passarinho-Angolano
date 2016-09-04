@@ -11,8 +11,11 @@ import UIKit
 import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+       //Rewards
+   
+    var ginguba = SKSpriteNode()
     
-    
+    var cafe = SKSpriteNode()
     
     var entreDezeVinte = true // PARA TOCAR O SOM UMA VEZ
     var maiorQueVinte = true // Para tocar o som uma vez
@@ -40,6 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     var score = 0
+    var milhoScore = 0
     
     
     var life = 3
@@ -71,7 +75,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var pipe1 = SKSpriteNode()
     var pipe2 = SKSpriteNode()
     
+    
+    
+    
+    
+ 
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
     var movingObjects = SKSpriteNode()
+    
+    var movingRewards = SKSpriteNode()
     
     var labelContainer = SKSpriteNode()
     
@@ -79,6 +100,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         case Bird = 1
         case Object = 2
         case Gap = 4
+        case milho = 6
+        case ginguba = 8
+        case cafe = 10
+        
+        
         
         // If you have more types give a number doble of two.
     
@@ -216,6 +242,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //IF you want to INCREASE THE LEVEL OF THE DIFFICULT INCREASE THE TYME HERE
         _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("makePipes"), userInfo: nil, repeats: true)
+            
+    
+            
+            
+            
         isStarting = false
         firstTouch = false
         }
@@ -250,6 +281,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 //IF you want to INCREASE THE LEVEL OF THE DIFFICULT INCREASE THE TYME HERE
                 _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("makePipes"), userInfo: nil, repeats: true)
+                //  _ = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("adicionarReward"), userInfo: nil, repeats: true)
+                
+                
+                
                 isStarting = false
 
             }
@@ -361,6 +396,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         self.addChild(movingObjects)
         self.addChild(labelContainer)
+        self.addChild(movingRewards)
         
         makeBackground()
         
@@ -467,8 +503,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     }
     
-    func makePipes(){
+    var milho = SKSpriteNode()
     
+    
+    
+    
+    
+    func makePipes(){
+        
+      
         let gapHeight = bird.size.height * 3
         
         let movementAmount = arc4random() % UInt32(self.frame.size.height / 2)
@@ -514,6 +557,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         movingObjects.addChild(pipe2)
         
+        
+    
+        
+        
+        
+        
+
+        
+        
+        var milhoTexture = SKTexture(imageNamed: "flappy1.png")
+        var milho = SKSpriteNode(texture: milhoTexture)
+        milho.position = CGPoint(x: CGRectGetMidX(self.frame) + 140 + self.frame.size.width, y: CGRectGetMidY(self.frame) - 100)
+        milho.runAction(moveAndRemovePipes)
+        milho.physicsBody = SKPhysicsBody(rectangleOfSize: milhoTexture.size())
+        milho.physicsBody?.dynamic = false
+        
+        
+        milho.physicsBody?.categoryBitMask = ColliderType.milho.rawValue
+        milho.physicsBody?.contactTestBitMask = ColliderType.Bird.rawValue
+        milho.physicsBody?.collisionBitMask = ColliderType.milho.rawValue
+        
+        
+        movingRewards.addChild(milho)
+        
+        
+        
+        
+        
+        
+        
+        
         var gap = SKNode()
         gap.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + pipeOffset)
         gap.runAction(moveAndRemovePipes)
@@ -536,6 +610,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func didBeginContact(contact: SKPhysicsContact) {
+        // Se fizer contacto com o milho 
+        
+        
+        
+        
         // If it collides with the object Gap do not finish the game
         if contact.bodyA.categoryBitMask == ColliderType.Gap.rawValue ||  contact.bodyB.categoryBitMask == ColliderType.Gap.rawValue {
         
@@ -572,6 +651,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           //--------------- HIGH SCORE --------------------
             
             
+        }else if contact.bodyA.categoryBitMask == ColliderType.milho.rawValue ||  contact.bodyB.categoryBitMask == ColliderType.milho.rawValue {
+            print("contacto")
+            milhoScore++
+           movingRewards.removeAllChildren()
+            print(milhoScore)
+            defaults.setInteger(milhoScore, forKey: "milho")
+            
+            
+            
         }else{
             
             if gameOver == false {
@@ -579,7 +667,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //If you still have lifes
                 
                 
-            
                 
                 gameOver = true
                  //Game Over Label Score
@@ -717,6 +804,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             bird.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
             bird.physicsBody?.velocity = CGVectorMake(0, 0)
             movingObjects.removeAllChildren()
+                
+            movingRewards.removeAllChildren()
+                
             makeBackground()
             self.speed = 1
             
@@ -729,6 +819,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 bird.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
                 bird.physicsBody?.velocity = CGVectorMake(0, 0)
                 movingObjects.removeAllChildren()
+                movingRewards.removeAllChildren()
                 makeBackground()
                 self.speed = 1
                 
