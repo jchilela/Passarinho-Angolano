@@ -11,6 +11,13 @@ import UIKit
 import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+    //Save the last milho location
+    var milhoX: Float32 = 0.0
+    var milhoY: Float32 = 0.0
+    
+    
+    
        //Rewards
    
     var ginguba = SKSpriteNode()
@@ -29,7 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var irJogando =  NSBundle.mainBundle().pathForResource("irJogando3", ofType: "mp3")!
     
-    
+    var milhoContacto = false
     
     
  
@@ -484,7 +491,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Add gravity to the bird
         bird.physicsBody?.dynamic = true
         
+        /*if milhoContacto == true {
         
+            bird.position = CGPoint(x: CGRectGetMidX(self.frame) + 140 + self.frame.size.width, y: CGRectGetMidY(self.frame) - 100)
+            milhoContacto = false
+        }else if milhoContacto == false {*/
         // Give position to the image
         bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidX(self.frame))
         
@@ -569,6 +580,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var milhoTexture = SKTexture(imageNamed: "flappy1.png")
         var milho = SKSpriteNode(texture: milhoTexture)
         milho.position = CGPoint(x: CGRectGetMidX(self.frame) + 140 + self.frame.size.width, y: CGRectGetMidY(self.frame) - 100)
+        
+        print(CGRectGetMidX(self.frame) + 140 + self.frame.size.width)
+        print(CGRectGetMidY(self.frame) - 100)
+        milhoX = Float32( CGRectGetMidX(self.frame) + 140 + self.frame.size.width)
+        milhoY = Float32(CGRectGetMidY(self.frame) - 100)
+        
         milho.runAction(moveAndRemovePipes)
         milho.physicsBody = SKPhysicsBody(rectangleOfSize: milhoTexture.size())
         milho.physicsBody?.dynamic = false
@@ -599,6 +616,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         movingObjects.addChild(gap)
     
     }
+ 
+    
     
     var isFirstScore = true
    
@@ -622,6 +641,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
              scoreLabel.text = "Pontos: \(score)"
             
            
+      
             
             //Play the music reducing the time
             audioPlayerPerdeu.stop()
@@ -650,9 +670,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
           //--------------- HIGH SCORE --------------------
             
+            //AVOID BIRD to Rotate. Put it in the original
+            bird.physicsBody?.velocity = CGVectorMake(0, 0)
+            bird.physicsBody?.angularVelocity = 0
+            bird.zRotation = 0
+            //---------------------------------------------
+            
+            
+            
             
         }else if contact.bodyA.categoryBitMask == ColliderType.milho.rawValue ||  contact.bodyB.categoryBitMask == ColliderType.milho.rawValue {
             print("contacto")
+           // bird.removeFromParent()
+           // milhoContacto = true
+           // makeBird()
+            
+            //AVOID BIRD to Rotate. Put it in the original
+            bird.physicsBody?.velocity = CGVectorMake(0, 0)
+            bird.physicsBody?.angularVelocity = 0
+            bird.zRotation = 0
+            //---------------------------------------------
+            
+            
             milhoScore++
            movingRewards.removeAllChildren()
             print(milhoScore)

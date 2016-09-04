@@ -102,6 +102,11 @@ class NiveisViewController: UIViewController {
     @IBOutlet weak var malange: UIButton!
     @IBOutlet weak var cuanzaNorte: UIButton!
     
+    @IBAction func bababus(sender: AnyObject) {
+        
+        performSegueWithIdentifier("bababus", sender: self)
+        
+    }
     
     
     override func viewDidLoad() {

@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459.5" y="-50.5"/>
+            <point key="canvasLocation" x="338.5" y="-244.5"/>
         </scene>
         <!--Niveis View Controller-->
         <scene sceneID="VpB-nL-7JP">
@@ -224,6 +224,15 @@
                                     <constraint firstAttribute="width" constant="23" id="lUJ-Ig-kUL"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsJ-No-Kss">
+                                <rect key="frame" x="204" y="324" width="106" height="18"/>
+                                <state key="normal" title="Bababús">
+                                    <color key="titleColor" red="1" green="0.30013654820000002" blue="0.278152754" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="bababus:" destination="t3k-xw-DBD" eventType="touchUpInside" id="G0o-sM-Lzj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -250,6 +259,7 @@
                             <constraint firstItem="Bqe-ll-JWb" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-75" id="Ryv-A7-uRZ"/>
                             <constraint firstItem="zWo-gB-nkP" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-75" id="SJh-NY-zR9"/>
                             <constraint firstItem="Ta7-iP-zEh" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-141" id="Vaa-9z-RdR"/>
+                            <constraint firstItem="bsJ-No-Kss" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-30" id="WES-ly-oTA"/>
                             <constraint firstItem="hdt-VC-NTd" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-136" id="XIo-E9-KGv"/>
                             <constraint firstItem="87A-j8-lUo" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-24" id="YBr-Mm-7zK"/>
                             <constraint firstItem="Bqe-ll-JWb" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-70" id="Zje-PD-iSd"/>
@@ -273,6 +283,7 @@
                             <constraint firstItem="0t1-OX-MlL" firstAttribute="top" secondItem="Cef-eQ-dmY" secondAttribute="bottom" constant="-30" id="xmU-24-OzP"/>
                             <constraint firstItem="Cef-eQ-dmY" firstAttribute="leading" secondItem="se7-lt-qXd" secondAttribute="trailing" constant="-191" id="ymy-WU-UIS"/>
                             <constraint firstItem="Cef-eQ-dmY" firstAttribute="top" secondItem="se7-lt-qXd" secondAttribute="bottom" constant="-75" id="zB0-Ts-QwA"/>
+                            <constraint firstItem="bsJ-No-Kss" firstAttribute="leading" secondItem="Cef-eQ-dmY" secondAttribute="trailing" constant="-110" id="zuZ-N1-fpr"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -296,16 +307,17 @@
                         <outlet property="uige" destination="Ta7-iP-zEh" id="YXS-Ga-4ax"/>
                         <outlet property="zaire" destination="T3u-Vf-7si" id="YMu-0I-2No"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="jogar" id="que-ux-CFt"/>
+                        <segue destination="s04-9E-xHb" kind="show" identifier="bababus" id="Q9X-p6-hi6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPX-B4-l2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814.5" y="-84.5"/>
+            <point key="canvasLocation" x="538.5" y="-192.5"/>
         </scene>
-        <!--RewordsUI View Controller-->
+        <!--Bababus-->
         <scene sceneID="xJp-bJ-g7S">
             <objects>
-                <viewController id="s04-9E-xHb" customClass="RewordsUIViewController" customModule="Passarinho_Angolano" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Bababus" id="s04-9E-xHb" customClass="RewordsUIViewController" customModule="Passarinho_Angolano" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NKi-pN-kPh"/>
                         <viewControllerLayoutGuide type="bottom" id="IqD-7j-KiS"/>
@@ -434,6 +446,7 @@
         <image name="bird2.png" width="83" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eYf-qW-Qc6"/>
+        <segue reference="gtT-za-Lpr"/>
+        <segue reference="fJd-t6-iHc"/>
     </inferredMetricsTieBreakers>
 </document>

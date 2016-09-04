@@ -31,6 +31,9 @@ class RewordsUIViewController: UIViewController {
         let cafe = defaults.integerForKey("cafe")
         
         let milho = defaults.integerForKey("milho")
+        
+    
+        
         let ginguba = defaults.integerForKey("ginguba")
         let rainhaGinga = defaults.integerForKey("rainhaGinga")
         let reiMandume = defaults.integerForKey("reiMandume")
