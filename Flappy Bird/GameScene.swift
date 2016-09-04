@@ -12,12 +12,7 @@ import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    //Save the last milho location
-    var milhoX: Float32 = 0.0
-    var milhoY: Float32 = 0.0
-    
-    
-    
+
        //Rewards
    
     var ginguba = SKSpriteNode()
@@ -35,8 +30,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     var irJogando =  NSBundle.mainBundle().pathForResource("irJogando3", ofType: "mp3")!
-    
-    var milhoContacto = false
     
     
  
@@ -497,7 +490,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             milhoContacto = false
         }else if milhoContacto == false {*/
         // Give position to the image
-        bird.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidX(self.frame))
+        bird.position = CGPoint(x: CGRectGetMidX(self.frame) - 100, y: CGRectGetMidX(self.frame))
         
         //add the animation
         bird.runAction(makeBirdFlap)
@@ -567,7 +560,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 
         movingObjects.addChild(pipe2)
-        
+        print("GapHeight---\(gapHeight) pipofset\(pipeOffset)")
         
     
         
@@ -576,16 +569,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
 
         
+        var RNumber = randomInt(200,max: 320)
+        var RNumber2 = randomInt(100,max: 320)
+        print("RNUNber\(RNumber)")
+        print("RNUNber2\(RNumber2)")
         
         var milhoTexture = SKTexture(imageNamed: "flappy1.png")
         var milho = SKSpriteNode(texture: milhoTexture)
-        milho.position = CGPoint(x: CGRectGetMidX(self.frame) + 140 + self.frame.size.width, y: CGRectGetMidY(self.frame) - 100)
-        
-        print(CGRectGetMidX(self.frame) + 140 + self.frame.size.width)
-        print(CGRectGetMidY(self.frame) - 100)
-        milhoX = Float32( CGRectGetMidX(self.frame) + 140 + self.frame.size.width)
-        milhoY = Float32(CGRectGetMidY(self.frame) - 100)
-        
+        milho.position = CGPoint(x: CGRectGetMidX(self.frame) + CGFloat(RNumber) + self.frame.size.width, y: CGRectGetMidY(self.frame) - CGFloat(RNumber2))
+  
         milho.runAction(moveAndRemovePipes)
         milho.physicsBody = SKPhysicsBody(rectangleOfSize: milhoTexture.size())
         milho.physicsBody?.dynamic = false
@@ -607,6 +599,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var gap = SKNode()
         gap.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + pipeOffset)
+        
+      
+        
         gap.runAction(moveAndRemovePipes)
         gap.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(pipe1.size.width / 2, gapHeight) )
         gap.physicsBody?.dynamic = false
@@ -617,6 +612,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     }
  
+    
+    func randomInt(min: Int, max:Int) -> Int {
+        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
+    }
     
     
     var isFirstScore = true
@@ -670,12 +669,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
           //--------------- HIGH SCORE --------------------
             
-            //AVOID BIRD to Rotate. Put it in the original
-            bird.physicsBody?.velocity = CGVectorMake(0, 0)
-            bird.physicsBody?.angularVelocity = 0
-            bird.zRotation = 0
-            //---------------------------------------------
-            
+                       
             
             
             
