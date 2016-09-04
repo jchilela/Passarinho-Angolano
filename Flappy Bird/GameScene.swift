@@ -44,6 +44,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var score = 0
     var milhoScore = 0
+    var gingubaScore = 0
+    var cafeScore = 0
     
     
     var life = 3
@@ -209,6 +211,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
         }
+        var randomNumber = Double(arc4random_uniform(10) + 10)
+        
+        var timer = NSTimer()
+       _ = NSTimer.scheduledTimerWithTimeInterval(randomNumber, target:self, selector: "bababus", userInfo: nil, repeats: true)
 
     }
     
@@ -565,37 +571,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
         
         
-        
-        
-
-        
-        var RNumber = randomInt(200,max: 320)
-        var RNumber2 = randomInt(100,max: 320)
-        print("RNUNber\(RNumber)")
-        print("RNUNber2\(RNumber2)")
-        
-        var milhoTexture = SKTexture(imageNamed: "milho.png")
-        var milho = SKSpriteNode(texture: milhoTexture)
-        milho.position = CGPoint(x: CGRectGetMidX(self.frame) + CGFloat(RNumber) + self.frame.size.width, y: CGRectGetMidY(self.frame) - CGFloat(RNumber2))
-  
-        milho.runAction(moveAndRemovePipes)
-        milho.physicsBody = SKPhysicsBody(rectangleOfSize: milhoTexture.size())
-        milho.physicsBody?.dynamic = false
-        
-        
-        milho.physicsBody?.categoryBitMask = ColliderType.milho.rawValue
-        milho.physicsBody?.contactTestBitMask = ColliderType.Bird.rawValue
-        milho.physicsBody?.collisionBitMask = ColliderType.milho.rawValue
-        
-        
-        movingRewards.addChild(milho)
-        
-        
-        
-        
-        
-        
-        
+       
         
         var gap = SKNode()
         gap.position = CGPoint(x: CGRectGetMidX(self.frame) + self.frame.size.width, y: CGRectGetMidY(self.frame) + pipeOffset)
@@ -621,6 +597,106 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isFirstScore = true
    
     
+    func bababus(){
+        let gapHeight = bird.size.height * 3
+        
+        let movementAmount = arc4random() % UInt32(self.frame.size.height / 2)
+        
+        let pipeOffset = CGFloat(movementAmount) - self.frame.size.height / 4
+        
+        let movePipes = SKAction.moveByX(-self.frame.size.width * 2, y: 0, duration: NSTimeInterval(self.frame.width / 100))
+        
+        let removePipes = SKAction.removeFromParent()
+        let moveAndRemovePipes = SKAction.sequence([movePipes, removePipes])
+        
+        var randomChoice = randomInt(0,max: 30)
+        
+        if randomChoice > 0 && randomChoice <= 10{
+            //MIlho
+            
+            
+            var RNumber = randomInt(200,max: 320)
+            var RNumber2 = randomInt(30,max: 200)
+            print("RNUNber\(RNumber)")
+            print("RNUNber2\(RNumber2)")
+            
+            var milhoTexture = SKTexture(imageNamed: "milho.png")
+            var milho = SKSpriteNode(texture: milhoTexture)
+            milho.position = CGPoint(x: CGRectGetMidX(self.frame) + CGFloat(RNumber) + self.frame.size.width, y: CGRectGetMidY(self.frame) - CGFloat(RNumber2))
+            
+            milho.runAction(moveAndRemovePipes)
+            milho.physicsBody = SKPhysicsBody(rectangleOfSize: milhoTexture.size())
+            milho.physicsBody?.dynamic = false
+            
+            
+            milho.physicsBody?.categoryBitMask = ColliderType.milho.rawValue
+            milho.physicsBody?.contactTestBitMask = ColliderType.Bird.rawValue
+            milho.physicsBody?.collisionBitMask = ColliderType.milho.rawValue
+            
+            
+            movingRewards.addChild(milho)
+        }else if randomChoice > 10 && randomChoice <= 20{
+            
+            
+            
+            // Cafe
+            
+            var RNumberC = randomInt(200,max: 340)
+            var RNumber2c = randomInt(30,max: 270)
+            
+            
+            var cafeTexture = SKTexture(imageNamed: "cafe.png")
+            var cafe = SKSpriteNode(texture: cafeTexture)
+            cafe.position = CGPoint(x: CGRectGetMidX(self.frame) + CGFloat(RNumberC) + self.frame.size.width, y: CGRectGetMidY(self.frame) - CGFloat(RNumber2c))
+            
+            cafe.runAction(moveAndRemovePipes)
+            cafe.physicsBody = SKPhysicsBody(rectangleOfSize: cafeTexture.size())
+            cafe.physicsBody?.dynamic = false
+            
+            
+            cafe.physicsBody?.categoryBitMask = ColliderType.cafe.rawValue
+            cafe.physicsBody?.contactTestBitMask = ColliderType.Bird.rawValue
+            cafe.physicsBody?.collisionBitMask = ColliderType.milho.rawValue
+            
+            
+            movingRewards.addChild(cafe)
+            
+        }else{
+            // Ginguba
+            
+            
+            var RNumberg = randomInt(200,max: 320)
+            var RNumber2g = randomInt(100,max: 200)
+            
+            
+            var gingubaTexture = SKTexture(imageNamed: "ginguba.png")
+            var ginguba = SKSpriteNode(texture: gingubaTexture)
+            ginguba.position = CGPoint(x: CGRectGetMidX(self.frame) + CGFloat(RNumberg) + self.frame.size.width, y: CGRectGetMidY(self.frame) - CGFloat(RNumber2g))
+            
+            ginguba.runAction(moveAndRemovePipes)
+            ginguba.physicsBody = SKPhysicsBody(rectangleOfSize: gingubaTexture.size())
+            ginguba.physicsBody?.dynamic = false
+            
+            
+            ginguba.physicsBody?.categoryBitMask = ColliderType.ginguba.rawValue
+            ginguba.physicsBody?.contactTestBitMask = ColliderType.Bird.rawValue
+            ginguba.physicsBody?.collisionBitMask = ColliderType.milho.rawValue
+            
+            
+            movingRewards.addChild(ginguba)
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+    
+    }
  
     
     
@@ -690,6 +766,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
            movingRewards.removeAllChildren()
             print(milhoScore)
             defaults.setInteger(milhoScore, forKey: "milho")
+            
+            
+            
+        }else if contact.bodyA.categoryBitMask == ColliderType.cafe.rawValue ||  contact.bodyB.categoryBitMask == ColliderType.cafe.rawValue {
+            print("contacto")
+            // bird.removeFromParent()
+            // milhoContacto = true
+            // makeBird()
+            
+            //AVOID BIRD to Rotate. Put it in the original
+            bird.physicsBody?.velocity = CGVectorMake(0, 0)
+            bird.physicsBody?.angularVelocity = 0
+            bird.zRotation = 0
+            //---------------------------------------------
+            
+            
+            cafeScore++
+            movingRewards.removeAllChildren()
+            print(cafeScore)
+            defaults.setInteger(cafeScore, forKey: "cafe")
+            
+            
+            
+        }else if contact.bodyA.categoryBitMask == ColliderType.ginguba.rawValue ||  contact.bodyB.categoryBitMask == ColliderType.ginguba.rawValue {
+            print("contacto")
+            // bird.removeFromParent()
+            // milhoContacto = true
+            // makeBird()
+            
+            //AVOID BIRD to Rotate. Put it in the original
+            bird.physicsBody?.velocity = CGVectorMake(0, 0)
+            bird.physicsBody?.angularVelocity = 0
+            bird.zRotation = 0
+            //---------------------------------------------
+            
+            
+            gingubaScore++
+            movingRewards.removeAllChildren()
+            print(gingubaScore)
+            defaults.setInteger(gingubaScore, forKey: "ginguba")
             
             
             
