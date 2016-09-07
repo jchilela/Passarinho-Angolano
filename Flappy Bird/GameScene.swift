@@ -57,6 +57,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     var button = SKSpriteNode(imageNamed: "iniciar.png")
+    
+   
+    
     //Nivel ________
     var buttonAlterarNivel = SKSpriteNode(imageNamed: "nivel.png")
     var nivelLabel = SKLabelNode()
@@ -315,8 +318,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             
-            
-            
         }
         
     }
@@ -329,7 +330,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func didMoveToView(view: SKView) {
+        let som = defaults.integerForKey("som")
         
+
         
         do {
             
@@ -373,7 +376,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
    
         
                // Put it in the center of the scene
-        button.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.size.height - self.frame.size.height/2);
+        button.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.size.height - self.frame.size.height/2)
         button.name = "Click me"
         self.addChild(button)
         
@@ -382,6 +385,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         buttonAlterarNivel.position = CGPointMake(CGRectGetMidX(self.frame) - self.frame.size.width/7 + 300, CGRectGetMidY(self.frame) - self.frame.size.height/2 + 7 + self.frame.size.height/7)
         buttonAlterarNivel.name = "Level"
         self.addChild(buttonAlterarNivel)
+        
+        
+        
+        
+  
+        
         
         //Level LABEL
         nivelLabel.fontName = "Helvetica"
@@ -508,8 +517,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         movingObjects.addChild(bird)
         // -----This is how you add a image to the screen
         audioPlayerIrJogando.numberOfLoops = -1
-        audioPlayerIrJogando.play()
         
+        if defaults.integerForKey("som") == 0 {
+        
+        
+        }else{
+        audioPlayerIrJogando.play()
+        }
     
     }
     
@@ -716,14 +730,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
              scoreLabel.text = "Pontos: \(score)"
             
            
-      
+       if defaults.integerForKey("som") != 0 {
             
             //Play the music reducing the time
             audioPlayerPerdeu.stop()
             audioPlayerIrJogando.stop()
+            
+           
             audioPlayerPonto.play()
+            }
+            
+            if defaults.integerForKey("som") != 0 {
             audioPlayerIrJogando.numberOfLoops = -1
-            audioPlayerIrJogando.play()
+            
+                audioPlayerIrJogando.play()
+            
+            }
             
             //timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkTime", userInfo: nil, repeats: true)
 
@@ -765,7 +787,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             milhoScore++
            movingRewards.removeAllChildren()
             print(milhoScore)
-            defaults.setInteger(milhoScore, forKey: "milho")
+            
+            let highscoreMilho = defaults.integerForKey("milho")
+                defaults.setInteger(highscoreMilho + 1 , forKey: "milho")
+            
+
+            
+          
             
             
             
@@ -784,9 +812,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             cafeScore++
             movingRewards.removeAllChildren()
-            print(cafeScore)
-            defaults.setInteger(cafeScore, forKey: "cafe")
             
+            
+            let highscoreCafe = defaults.integerForKey("cafe")
+            
+         
+                defaults.setInteger(highscoreCafe + 1, forKey: "cafe")
+                
+           
+            
+            
+            
+          
             
             
         }else if contact.bodyA.categoryBitMask == ColliderType.ginguba.rawValue ||  contact.bodyB.categoryBitMask == ColliderType.ginguba.rawValue {
@@ -805,8 +842,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gingubaScore++
             movingRewards.removeAllChildren()
             print(gingubaScore)
-            defaults.setInteger(gingubaScore, forKey: "ginguba")
             
+            
+            
+            let highscoreG = defaults.integerForKey("ginguba")
+            
+                defaults.setInteger(highscoreG + 1, forKey: "ginguba")
+                
+                
+          
             
             
         }else{
@@ -840,7 +884,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     gameOverLabel.text = "O jogo terminou. Clique na tela para reiniciar."
                     audioPlayerIrJogando.stop()
                     audioPlayerPonto.stop()
-                    audioPlayerPerdeu.play()
+                     if defaults.integerForKey("som") != 0 {
+                        audioPlayerPerdeu.play()
+                    }
                     entreDezeVinte = true
                     maiorQueVinte = true
                 }else{
@@ -848,7 +894,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     //Play the music reducing the time
                     audioPlayerIrJogando.stop()
                     audioPlayerPonto.stop()
+                    
+                     if defaults.integerForKey("som") != 0 {
                     audioPlayerPerdeu.play()
+                    }
                     
                 }
                 gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
@@ -893,8 +942,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //Process the error here
                 
             }
-            
+             if defaults.integerForKey("som") != 0 {
             audioPlayerIrJogando.play()
+            }
             entreDezeVinte = false
         }else if score > 20 && maiorQueVinte == true {
             irJogando =  NSBundle.mainBundle().pathForResource("irJogando2", ofType: "mp3")!
@@ -910,8 +960,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 //Process the error here
                 
             }
-            
+             if defaults.integerForKey("som") != 0 {
             audioPlayerIrJogando.play()
+            }
             maiorQueVinte = false
         }
      
