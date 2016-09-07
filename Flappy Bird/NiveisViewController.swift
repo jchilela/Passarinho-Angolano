@@ -112,7 +112,7 @@ class NiveisViewController: UIViewController {
     override func viewDidLoad() {
         //Loading the chosen level
        // defaults.setInteger(8, forKey: "level")
-        let level = defaults.integerForKey("level")
+        let level = defaults.integerForKey("levelDesbloqueio")
         
         
       

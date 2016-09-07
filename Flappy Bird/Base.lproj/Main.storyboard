@@ -23,11 +23,12 @@
                     <connections>
                         <segue destination="t3k-xw-DBD" kind="show" identifier="nivel" id="fJd-t6-iHc"/>
                         <segue destination="s04-9E-xHb" kind="show" identifier="rewords" id="gtT-za-Lpr"/>
+                        <segue destination="6Qg-a4-D2G" kind="show" identifier="desbloqueio" id="mbq-BZ-XR4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="338.5" y="-244.5"/>
+            <point key="canvasLocation" x="222.5" y="-272.5"/>
         </scene>
         <!--Niveis View Controller-->
         <scene sceneID="VpB-nL-7JP">
@@ -312,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPX-B4-l2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538.5" y="-192.5"/>
+            <point key="canvasLocation" x="732.5" y="152.5"/>
         </scene>
         <!--Bababus-->
         <scene sceneID="xJp-bJ-g7S">
@@ -333,7 +334,7 @@
                                     <constraint firstAttribute="height" constant="21" id="itZ-Rb-Xn1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BIR-KE-0Bg">
@@ -350,7 +351,7 @@
                                     <constraint firstAttribute="height" constant="21" id="bXB-zf-Tb2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lj-gy-2hO">
@@ -369,7 +370,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="pys-At-f9b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bababús" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRy-8J-cvL">
@@ -451,7 +452,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUo-8h-ze9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242.5" y="-77.5"/>
+            <point key="canvasLocation" x="1614.5" y="113.5"/>
+        </scene>
+        <!--DesbloqueioUI View Controller-->
+        <scene sceneID="YJD-yR-hvA">
+            <objects>
+                <viewController id="6Qg-a4-D2G" customClass="DesbloqueioUIViewController" customModule="Passarinho_Angolano" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jtf-J8-BGd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bzo-2o-nf3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KJw-gB-TPc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Parabéns, você acabou de desbloquear a província:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTo-vN-Gt8">
+                                <rect key="frame" x="50" y="116" width="270" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JPw-h6-KiC"/>
+                                    <constraint firstAttribute="width" constant="270" id="KDp-wg-um7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Ae-oPT">
+                                <rect key="frame" x="55" y="156" width="234" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1lL-WT-bOM"/>
+                                    <constraint firstAttribute="width" constant="234" id="p4H-U4-WhS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gx4-SK-jxW">
+                                <rect key="frame" x="144" y="206" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IZH-ng-aWq"/>
+                                    <constraint firstAttribute="width" constant="87" id="ZMF-K8-QS9"/>
+                                </constraints>
+                                <state key="normal" title="Ir para níveis"/>
+                                <connections>
+                                    <action selector="ir:" destination="6Qg-a4-D2G" eventType="touchUpInside" id="33A-Eb-F1O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gx4-SK-jxW" secondAttribute="trailing" constant="124" id="2tJ-bL-2PO"/>
+                            <constraint firstItem="gx4-SK-jxW" firstAttribute="top" secondItem="HPt-Ae-oPT" secondAttribute="bottom" constant="29" id="991-Ih-Zbl"/>
+                            <constraint firstItem="fTo-vN-Gt8" firstAttribute="centerX" secondItem="KJw-gB-TPc" secondAttribute="centerX" id="IaL-9l-Afp"/>
+                            <constraint firstItem="fTo-vN-Gt8" firstAttribute="leading" secondItem="KJw-gB-TPc" secondAttribute="leadingMargin" constant="30" id="NVQ-Ey-DBV"/>
+                            <constraint firstItem="gx4-SK-jxW" firstAttribute="leading" secondItem="KJw-gB-TPc" secondAttribute="leadingMargin" constant="124" id="Wrw-yb-f9z"/>
+                            <constraint firstItem="fTo-vN-Gt8" firstAttribute="top" secondItem="Jtf-J8-BGd" secondAttribute="bottom" constant="96" id="Y3V-Em-H7p"/>
+                            <constraint firstItem="HPt-Ae-oPT" firstAttribute="top" secondItem="fTo-vN-Gt8" secondAttribute="bottom" constant="19" id="c5A-l1-veR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTo-vN-Gt8" secondAttribute="trailing" constant="35" id="cab-mX-Gdm"/>
+                            <constraint firstItem="fTo-vN-Gt8" firstAttribute="centerX" secondItem="KJw-gB-TPc" secondAttribute="centerX" id="fzS-wN-iqo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTo-vN-Gt8" secondAttribute="trailing" constant="35" id="jZs-JQ-Uef"/>
+                            <constraint firstItem="HPt-Ae-oPT" firstAttribute="centerX" secondItem="KJw-gB-TPc" secondAttribute="centerX" id="l3U-cP-Jau"/>
+                            <constraint firstItem="fTo-vN-Gt8" firstAttribute="leading" secondItem="KJw-gB-TPc" secondAttribute="leadingMargin" constant="30" id="yMR-Jn-kZ6"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="provincia" destination="HPt-Ae-oPT" id="gKD-up-faL"/>
+                        <segue destination="t3k-xw-DBD" kind="show" identifier="irParaNiveis" id="H6f-gZ-TRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIJ-dM-cJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.5" y="-504.5"/>
         </scene>
     </scenes>
     <resources>
@@ -460,6 +531,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Q9X-p6-hi6"/>
-        <segue reference="eYf-qW-Qc6"/>
+        <segue reference="H6f-gZ-TRA"/>
     </inferredMetricsTieBreakers>
 </document>

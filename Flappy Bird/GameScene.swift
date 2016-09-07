@@ -505,7 +505,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             milhoContacto = false
         }else if milhoContacto == false {*/
         // Give position to the image
-        bird.position = CGPoint(x: CGRectGetMidX(self.frame) - 100, y: CGRectGetMidX(self.frame))
+        bird.position = CGPoint(x: CGRectGetMidX(self.frame) , y: CGRectGetMidX(self.frame))
         
         //add the animation
         bird.runAction(makeBirdFlap)
@@ -728,6 +728,97 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
              score++
              scoreLabel.text = "Pontos: \(score)"
+            
+            print(defaults.integerForKey("levelDesbloqueio"))
+            if score == 20 && defaults.integerForKey("levelDesbloqueio") < 2 {
+                // Desbloquear Cuando Cubango
+                defaults.setInteger(2,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(2, forKey: "levelDesbloqueio")
+            viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            
+            }else if score == 60 && defaults.integerForKey("levelDesbloqueio") < 3{
+                //Desbloquear Huila
+                defaults.setInteger(3,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(3, forKey: "levelDesbloqueio")
+            viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            
+            }else if score == 160 && defaults.integerForKey("levelDesbloqueio") < 4 {
+                //Desbloquear Namibe
+                defaults.setInteger(4,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(4, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 260 && defaults.integerForKey("levelDesbloqueio") < 5 {
+                //Desbloquear Moxico
+                defaults.setInteger(5,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(5, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 360 && defaults.integerForKey("levelDesbloqueio") < 6 {
+                //Desbloquear Bié
+                defaults.setInteger(6,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(6, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 460 && defaults.integerForKey("levelDesbloqueio") < 7 {
+                //Desbloquear Huambo
+                defaults.setInteger(7,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(7, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 560 && defaults.integerForKey("levelDesbloqueio") < 8 {
+                //Desbloquear Benguela
+                defaults.setInteger(8,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(8, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 660 && defaults.integerForKey("levelDesbloqueio") < 9 {
+                //Desbloquear Lunda Sul
+                defaults.setInteger(9,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(9, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 760 && defaults.integerForKey("levelDesbloqueio") < 10 {
+                //Desbloquear Lunda Norte
+                defaults.setInteger(10,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(10, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 860 && defaults.integerForKey("levelDesbloqueio") < 11{
+                //Desbloquear Malange
+                defaults.setInteger(11,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(11, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 960 && defaults.integerForKey("levelDesbloqueio") < 12{
+                //Desbloquear Cuanza Sul
+                defaults.setInteger(12,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(12, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 1060 && defaults.integerForKey("levelDesbloqueio") < 13 {
+                //Desbloquear Cuanza Norte
+                defaults.setInteger(13,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(13, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 1160 && defaults.integerForKey("levelDesbloqueio") < 14 {
+                //Desbloquear Luanda
+                defaults.setInteger(14,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(14, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 1260 && defaults.integerForKey("levelDesbloqueio") < 15 {
+                //Desbloquear Uíge
+                defaults.setInteger(15,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(15, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 1360 && defaults.integerForKey("levelDesbloqueio") < 16 {
+                //Desbloquear Zaire
+                defaults.setInteger(16,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(16, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 1460 && defaults.integerForKey("levelDesbloqueio") < 17 {
+                //Desbloquear Bengo
+                defaults.setInteger(17,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(17, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }else if score == 1560  && defaults.integerForKey("levelDesbloqueio") < 18{
+                //Desbloquear Cabinda
+                defaults.setInteger(18,forKey: "provinciaDesbloqueada")
+                defaults.setInteger(18, forKey: "levelDesbloqueio")
+                viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
+            }
+            
             
            
        if defaults.integerForKey("som") != 0 {
