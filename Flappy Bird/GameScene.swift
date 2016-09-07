@@ -159,7 +159,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             //BACKGROUND IMAGE
-            let bgTexture = SKTexture(imageNamed: "bkg.png")
+            let bgTexture = SKTexture(imageNamed: "2Cuando_Cubango.jpg")
             
             
             let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
@@ -730,19 +730,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
              scoreLabel.text = "Pontos: \(score)"
             
             print(defaults.integerForKey("levelDesbloqueio"))
-            if score == 20 && defaults.integerForKey("levelDesbloqueio") < 2 {
+            if score == 60 && defaults.integerForKey("levelDesbloqueio") < 2 {
                 // Desbloquear Cuando Cubango
                 defaults.setInteger(2,forKey: "provinciaDesbloqueada")
                 defaults.setInteger(2, forKey: "levelDesbloqueio")
             viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
             
-            }else if score == 60 && defaults.integerForKey("levelDesbloqueio") < 3{
+            }else if score == 120 && defaults.integerForKey("levelDesbloqueio") < 3{
                 //Desbloquear Huila
                 defaults.setInteger(3,forKey: "provinciaDesbloqueada")
                 defaults.setInteger(3, forKey: "levelDesbloqueio")
             viewController?.performSegueWithIdentifier("desbloqueio", sender: self)
             
-            }else if score == 160 && defaults.integerForKey("levelDesbloqueio") < 4 {
+            }else if score == 180 && defaults.integerForKey("levelDesbloqueio") < 4 {
                 //Desbloquear Namibe
                 defaults.setInteger(4,forKey: "provinciaDesbloqueada")
                 defaults.setInteger(4, forKey: "levelDesbloqueio")
