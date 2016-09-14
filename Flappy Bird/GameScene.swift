@@ -188,7 +188,442 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             
             //BACKGROUND IMAGE
-            let bgTexture = SKTexture(imageNamed: "2huila.png")
+            let bgTexture = SKTexture(imageNamed: "3huila.png")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 4{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "4Namibe.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 5{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "5Mochico.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 6{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "6Bie6.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 7{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "7Huambo.png")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 8{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "8BenguelaP.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 9{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "9LundaSul.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 10{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "10LundaNorte.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 11{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "11Malange.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 12{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "12CuanzaSul.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 13{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "13CuanzaNorte.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 14{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "14Luanda.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 15{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "15Uige.png")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 16{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "16Zaire.jpg")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 17{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "17Bengo.png")
+            
+            
+            let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
+            
+            //TO REPEAT THE IMAGE IN BACKGROUND
+            let replacebg = SKAction.moveByX(bgTexture.size().width, y: 0, duration: 0)
+            
+            let movebgForever = SKAction.repeatActionForever(SKAction.sequence([movebg, replacebg]))
+            
+            
+            
+            for var i: CGFloat = 0; i < 3; i++ {
+                
+                bg = SKSpriteNode(texture: bgTexture)
+                
+                bg.position = CGPoint(x: bgTexture.size().width/2 + bgTexture.size().width * i , y: CGRectGetMidY(self.frame))
+                
+                bg.size.height = self.frame.height // Make the background to stretch to all screen
+                bg.zPosition = -5
+                bg.runAction(movebgForever)
+                
+                movingObjects.addChild(bg)
+                
+            }
+        }else if level == 18{
+            
+            
+            //BACKGROUND IMAGE
+            let bgTexture = SKTexture(imageNamed: "18Cabinda.jpg")
             
             
             let movebg = SKAction.moveByX(-bgTexture.size().width, y: 0, duration: 9)
@@ -214,6 +649,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         var randomNumber = Double(arc4random_uniform(10) + 10)
         
         var timer = NSTimer()
