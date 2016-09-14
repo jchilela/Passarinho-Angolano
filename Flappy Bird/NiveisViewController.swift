@@ -118,41 +118,41 @@ class NiveisViewController: UIViewController {
       
             cunene.enabled = true
     
-            cuandoCubango.enabled = true
+            cuandoCubango.enabled = false
             
       
-            huila.enabled = true
+            huila.enabled = false
        
-            namibe.enabled = true
+            namibe.enabled = false
     
-            moxico.enabled = true
+            moxico.enabled = false
      
-            bie.enabled = true
+            bie.enabled = false
       
-            huambo.enabled = true
+            huambo.enabled = false
         
-            benguela.enabled = true
+            benguela.enabled = false
        
-            lundaSul.enabled = true
+            lundaSul.enabled = false
        
-            lundaNorte.enabled = true
+            lundaNorte.enabled = false
        
-            malange.enabled = true
+            malange.enabled = false
             
        
-            cuanzaSul.enabled = true
+            cuanzaSul.enabled = false
        
-            cuanzaNorte.enabled = true
+            cuanzaNorte.enabled = false
      
-            luanda.enabled = true
+            luanda.enabled = false
     
-            uige.enabled = true
+            uige.enabled = false
       
-            zaire.enabled = true
+            zaire.enabled = false
        
-            bengo.enabled = true
+            bengo.enabled = false
         
-            cabinda.enabled = true
+            cabinda.enabled = false
         
         //print(level)
         
