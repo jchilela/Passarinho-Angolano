@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-   
+        didFinishLaunchingOnce()
 
         return true
     }
@@ -42,7 +42,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
+ 
+    //When the app launch for the first time
+    func didFinishLaunchingOnce() -> Bool
+    {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults2 = NSUserDefaults()
+        
+        if let hasBeenLauncherBefore = defaults.stringForKey("hasAppBeenLaunchedBefore")
+        {
+            print(" N-th time app launched ")
+            return true
+        }
+        else
+        {
+            print(" First time app launched ")
+            defaults2.setInteger(1, forKey: "som")
+            defaults.setBool(true, forKey: "hasAppBeenLaunchedBefore")
+            return false
+        }
+    }
 
 
 }

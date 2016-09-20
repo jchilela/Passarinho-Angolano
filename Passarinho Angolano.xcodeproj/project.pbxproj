@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E54E2401D62621E0019FFE0 /* 2huila.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23F1D62621E0019FFE0 /* 2huila.png */; };
+		5E54E2401D62621E0019FFE0 /* 3huila.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54E23F1D62621E0019FFE0 /* 3huila.png */; };
 		5EA36F6E1D73365C00519335 /* 1cunene.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA36F6D1D73365C00519335 /* 1cunene.jpg */; };
 		5EA36F701D7348EA00519335 /* 1cunene.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EA36F6F1D7348EA00519335 /* 1cunene.png */; };
 		5EA36F721D7352FB00519335 /* NiveisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA36F711D7352FB00519335 /* NiveisViewController.swift */; };
@@ -31,6 +31,29 @@
 		5EBB30C21D7A507F003B7335 /* irJogando3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30C01D7A507E003B7335 /* irJogando3.mp3 */; };
 		5EBB30C41D7A69C6003B7335 /* Angola.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 5EBB30C31D7A69C6003B7335 /* Angola.JPG */; };
 		5EBB30C61D7A6EED003B7335 /* RewordsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBB30C51D7A6EED003B7335 /* RewordsUIViewController.swift */; };
+		5EC2EAA51D7BD7760015EE98 /* milho.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC2EAA41D7BD7760015EE98 /* milho.png */; };
+		5EC2EAA71D7BD9310015EE98 /* ginguba.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC2EAA61D7BD9310015EE98 /* ginguba.png */; };
+		5EC2EAA91D7BDAC50015EE98 /* cafe.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC2EAA81D7BDAC50015EE98 /* cafe.png */; };
+		5EC2EAAD1D7BEEF60015EE98 /* vOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC2EAAB1D7BEEF60015EE98 /* vOn.png */; };
+		5EC2EAAF1D7BF7E50015EE98 /* vOf.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EC2EAAE1D7BF7E50015EE98 /* vOf.png */; };
+		5ED5CEB21D899988005CE3F8 /* 4Namibe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEB11D899988005CE3F8 /* 4Namibe.jpg */; };
+		5ED5CEB41D899B3E005CE3F8 /* 5Mochico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEB31D899B3E005CE3F8 /* 5Mochico.jpg */; };
+		5ED5CEB61D899C50005CE3F8 /* 6Bie6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEB51D899C50005CE3F8 /* 6Bie6.jpg */; };
+		5ED5CEB81D899CF8005CE3F8 /* 7Huambo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEB71D899CF8005CE3F8 /* 7Huambo.png */; };
+		5ED5CEBA1D899D37005CE3F8 /* 8Benguela.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEB91D899D37005CE3F8 /* 8Benguela.jpg */; };
+		5ED5CEBC1D899D89005CE3F8 /* 9LundaSul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEBB1D899D89005CE3F8 /* 9LundaSul.jpg */; };
+		5ED5CEBE1D899E03005CE3F8 /* 11Malange.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEBD1D899E03005CE3F8 /* 11Malange.jpg */; };
+		5ED5CEC01D899E79005CE3F8 /* 13CuanzaNorte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEBF1D899E79005CE3F8 /* 13CuanzaNorte.jpg */; };
+		5ED5CEC21D899EB4005CE3F8 /* 17Bengo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEC11D899EB4005CE3F8 /* 17Bengo.png */; };
+		5ED5CEC41D899EEF005CE3F8 /* 14Luanda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEC31D899EEF005CE3F8 /* 14Luanda.jpg */; };
+		5ED5CEC61D899F56005CE3F8 /* 15Uige.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEC51D899F56005CE3F8 /* 15Uige.png */; };
+		5ED5CEC81D899F77005CE3F8 /* 16Zaire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEC71D899F77005CE3F8 /* 16Zaire.jpg */; };
+		5ED5CECA1D899F96005CE3F8 /* 18Cabinda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CEC91D899F96005CE3F8 /* 18Cabinda.jpg */; };
+		5ED5CECC1D89A04A005CE3F8 /* 10LundaNorte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CECB1D89A04A005CE3F8 /* 10LundaNorte.jpg */; };
+		5ED5CECE1D89A0A0005CE3F8 /* 12CuanzaSul.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CECD1D89A0A0005CE3F8 /* 12CuanzaSul.jpg */; };
+		5ED5CED01D89A416005CE3F8 /* 8BenguelaP.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5ED5CECF1D89A416005CE3F8 /* 8BenguelaP.jpg */; };
+		5EEEC8821D809F3C007B0D65 /* DesbloqueioUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEEC8811D809F3C007B0D65 /* DesbloqueioUIViewController.swift */; };
+		5EEEC8841D80AE17007B0D65 /* 2Cuando_Cubango.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EEEC8831D80AE17007B0D65 /* 2Cuando_Cubango.jpg */; };
 		5EFD3B941D679FB20045030F /* pi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B911D679FB20045030F /* pi.png */; };
 		5EFD3B951D679FB20045030F /* bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B921D679FB20045030F /* bird1.png */; };
 		5EFD3B961D679FB20045030F /* bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD3B931D679FB20045030F /* bird2.png */; };
@@ -39,7 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E54E23F1D62621E0019FFE0 /* 2huila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2huila.png; sourceTree = "<group>"; };
+		5E54E23F1D62621E0019FFE0 /* 3huila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3huila.png; sourceTree = "<group>"; };
 		5EA36F6D1D73365C00519335 /* 1cunene.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1cunene.jpg; sourceTree = "<group>"; };
 		5EA36F6F1D7348EA00519335 /* 1cunene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1cunene.png; sourceTree = "<group>"; };
 		5EA36F711D7352FB00519335 /* NiveisViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiveisViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +88,29 @@
 		5EBB30C01D7A507E003B7335 /* irJogando3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = irJogando3.mp3; sourceTree = "<group>"; };
 		5EBB30C31D7A69C6003B7335 /* Angola.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Angola.JPG; sourceTree = "<group>"; };
 		5EBB30C51D7A6EED003B7335 /* RewordsUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewordsUIViewController.swift; sourceTree = "<group>"; };
+		5EC2EAA41D7BD7760015EE98 /* milho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milho.png; sourceTree = "<group>"; };
+		5EC2EAA61D7BD9310015EE98 /* ginguba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ginguba.png; sourceTree = "<group>"; };
+		5EC2EAA81D7BDAC50015EE98 /* cafe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafe.png; sourceTree = "<group>"; };
+		5EC2EAAB1D7BEEF60015EE98 /* vOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vOn.png; sourceTree = "<group>"; };
+		5EC2EAAE1D7BF7E50015EE98 /* vOf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vOf.png; sourceTree = "<group>"; };
+		5ED5CEB11D899988005CE3F8 /* 4Namibe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4Namibe.jpg; sourceTree = "<group>"; };
+		5ED5CEB31D899B3E005CE3F8 /* 5Mochico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5Mochico.jpg; sourceTree = "<group>"; };
+		5ED5CEB51D899C50005CE3F8 /* 6Bie6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6Bie6.jpg; sourceTree = "<group>"; };
+		5ED5CEB71D899CF8005CE3F8 /* 7Huambo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7Huambo.png; sourceTree = "<group>"; };
+		5ED5CEB91D899D37005CE3F8 /* 8Benguela.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8Benguela.jpg; sourceTree = "<group>"; };
+		5ED5CEBB1D899D89005CE3F8 /* 9LundaSul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9LundaSul.jpg; sourceTree = "<group>"; };
+		5ED5CEBD1D899E03005CE3F8 /* 11Malange.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11Malange.jpg; sourceTree = "<group>"; };
+		5ED5CEBF1D899E79005CE3F8 /* 13CuanzaNorte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13CuanzaNorte.jpg; sourceTree = "<group>"; };
+		5ED5CEC11D899EB4005CE3F8 /* 17Bengo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 17Bengo.png; sourceTree = "<group>"; };
+		5ED5CEC31D899EEF005CE3F8 /* 14Luanda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14Luanda.jpg; sourceTree = "<group>"; };
+		5ED5CEC51D899F56005CE3F8 /* 15Uige.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15Uige.png; sourceTree = "<group>"; };
+		5ED5CEC71D899F77005CE3F8 /* 16Zaire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16Zaire.jpg; sourceTree = "<group>"; };
+		5ED5CEC91D899F96005CE3F8 /* 18Cabinda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18Cabinda.jpg; sourceTree = "<group>"; };
+		5ED5CECB1D89A04A005CE3F8 /* 10LundaNorte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10LundaNorte.jpg; sourceTree = "<group>"; };
+		5ED5CECD1D89A0A0005CE3F8 /* 12CuanzaSul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12CuanzaSul.jpg; sourceTree = "<group>"; };
+		5ED5CECF1D89A416005CE3F8 /* 8BenguelaP.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8BenguelaP.jpg; sourceTree = "<group>"; };
+		5EEEC8811D809F3C007B0D65 /* DesbloqueioUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesbloqueioUIViewController.swift; sourceTree = "<group>"; };
+		5EEEC8831D80AE17007B0D65 /* 2Cuando_Cubango.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2Cuando_Cubango.jpg; sourceTree = "<group>"; };
 		5EFD3B911D679FB20045030F /* pi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pi.png; sourceTree = "<group>"; };
 		5EFD3B921D679FB20045030F /* bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird1.png; sourceTree = "<group>"; };
 		5EFD3B931D679FB20045030F /* bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird2.png; sourceTree = "<group>"; };
@@ -102,6 +148,28 @@
 		5EADA1591D5F5E3F0093201D /* Flappy Bird */ = {
 			isa = PBXGroup;
 			children = (
+				5ED5CECF1D89A416005CE3F8 /* 8BenguelaP.jpg */,
+				5ED5CECB1D89A04A005CE3F8 /* 10LundaNorte.jpg */,
+				5ED5CEC91D899F96005CE3F8 /* 18Cabinda.jpg */,
+				5ED5CEC71D899F77005CE3F8 /* 16Zaire.jpg */,
+				5ED5CEC51D899F56005CE3F8 /* 15Uige.png */,
+				5ED5CEC31D899EEF005CE3F8 /* 14Luanda.jpg */,
+				5ED5CEC11D899EB4005CE3F8 /* 17Bengo.png */,
+				5ED5CEBF1D899E79005CE3F8 /* 13CuanzaNorte.jpg */,
+				5ED5CECD1D89A0A0005CE3F8 /* 12CuanzaSul.jpg */,
+				5ED5CEBD1D899E03005CE3F8 /* 11Malange.jpg */,
+				5ED5CEBB1D899D89005CE3F8 /* 9LundaSul.jpg */,
+				5ED5CEB91D899D37005CE3F8 /* 8Benguela.jpg */,
+				5ED5CEB71D899CF8005CE3F8 /* 7Huambo.png */,
+				5ED5CEB51D899C50005CE3F8 /* 6Bie6.jpg */,
+				5ED5CEB31D899B3E005CE3F8 /* 5Mochico.jpg */,
+				5ED5CEB11D899988005CE3F8 /* 4Namibe.jpg */,
+				5EC2EAAE1D7BF7E50015EE98 /* vOf.png */,
+				5EEEC8831D80AE17007B0D65 /* 2Cuando_Cubango.jpg */,
+				5EC2EAAB1D7BEEF60015EE98 /* vOn.png */,
+				5EC2EAA81D7BDAC50015EE98 /* cafe.png */,
+				5EC2EAA61D7BD9310015EE98 /* ginguba.png */,
+				5EC2EAA41D7BD7760015EE98 /* milho.png */,
 				5EBB30C31D7A69C6003B7335 /* Angola.JPG */,
 				5EBB30BF1D7A507E003B7335 /* irJogando2.mp3 */,
 				5EBB30C01D7A507E003B7335 /* irJogando3.mp3 */,
@@ -116,7 +184,7 @@
 				5EFD3B911D679FB20045030F /* pi.png */,
 				5EFD3B921D679FB20045030F /* bird1.png */,
 				5EFD3B931D679FB20045030F /* bird2.png */,
-				5E54E23F1D62621E0019FFE0 /* 2huila.png */,
+				5E54E23F1D62621E0019FFE0 /* 3huila.png */,
 				5EADA1701D5F62110093201D /* bg.png */,
 				5EADA1711D5F62110093201D /* flappy1.png */,
 				5EADA1721D5F62110093201D /* flappy2.png */,
@@ -127,6 +195,7 @@
 				5EADA15E1D5F5E3F0093201D /* GameScene.swift */,
 				5EADA1601D5F5E3F0093201D /* GameViewController.swift */,
 				5EADA1621D5F5E3F0093201D /* Main.storyboard */,
+				5EEEC8811D809F3C007B0D65 /* DesbloqueioUIViewController.swift */,
 				5EBB30C51D7A6EED003B7335 /* RewordsUIViewController.swift */,
 				5EA36F711D7352FB00519335 /* NiveisViewController.swift */,
 				5EADA1651D5F5E3F0093201D /* Assets.xcassets */,
@@ -196,28 +265,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EBB30B41D79FA79003B7335 /* nivel.png in Resources */,
+				5ED5CEB61D899C50005CE3F8 /* 6Bie6.jpg in Resources */,
 				5EFD3B941D679FB20045030F /* pi.png in Resources */,
+				5EC2EAA91D7BDAC50015EE98 /* cafe.png in Resources */,
 				5EADA1771D5F62110093201D /* flappy2.png in Resources */,
+				5ED5CEB81D899CF8005CE3F8 /* 7Huambo.png in Resources */,
 				5EADA1751D5F62110093201D /* bg.png in Resources */,
+				5ED5CEC81D899F77005CE3F8 /* 16Zaire.jpg in Resources */,
 				5EFD3B951D679FB20045030F /* bird1.png in Resources */,
+				5ED5CEC61D899F56005CE3F8 /* 15Uige.png in Resources */,
+				5EEEC8841D80AE17007B0D65 /* 2Cuando_Cubango.jpg in Resources */,
 				5EBB30C11D7A507F003B7335 /* irJogando2.mp3 in Resources */,
 				5EFD3B981D67A02A0045030F /* pi2.png in Resources */,
+				5ED5CEBA1D899D37005CE3F8 /* 8Benguela.jpg in Resources */,
+				5ED5CEBE1D899E03005CE3F8 /* 11Malange.jpg in Resources */,
 				5EADA15D1D5F5E3F0093201D /* GameScene.sks in Resources */,
+				5EC2EAAF1D7BF7E50015EE98 /* vOf.png in Resources */,
 				5EADA1781D5F62110093201D /* pipe1.png in Resources */,
 				5EBB30BC1D7A3C1E003B7335 /* ponto.mp3 in Resources */,
 				5EBB30B91D7A342D003B7335 /* perdeu.mp3 in Resources */,
+				5EC2EAA51D7BD7760015EE98 /* milho.png in Resources */,
+				5ED5CECC1D89A04A005CE3F8 /* 10LundaNorte.jpg in Resources */,
+				5ED5CECE1D89A0A0005CE3F8 /* 12CuanzaSul.jpg in Resources */,
 				5EBB30BE1D7A4560003B7335 /* irJogando.mp3 in Resources */,
+				5EC2EAA71D7BD9310015EE98 /* ginguba.png in Resources */,
 				5EBB30C21D7A507F003B7335 /* irJogando3.mp3 in Resources */,
+				5ED5CEB41D899B3E005CE3F8 /* 5Mochico.jpg in Resources */,
 				5EADA1691D5F5E3F0093201D /* LaunchScreen.storyboard in Resources */,
+				5ED5CED01D89A416005CE3F8 /* 8BenguelaP.jpg in Resources */,
+				5ED5CEC21D899EB4005CE3F8 /* 17Bengo.png in Resources */,
 				5EFD3B961D679FB20045030F /* bird2.png in Resources */,
 				5EA36F6E1D73365C00519335 /* 1cunene.jpg in Resources */,
-				5E54E2401D62621E0019FFE0 /* 2huila.png in Resources */,
+				5ED5CECA1D899F96005CE3F8 /* 18Cabinda.jpg in Resources */,
+				5E54E2401D62621E0019FFE0 /* 3huila.png in Resources */,
+				5ED5CEC41D899EEF005CE3F8 /* 14Luanda.jpg in Resources */,
 				5EA36F701D7348EA00519335 /* 1cunene.png in Resources */,
 				5EFD3B9C1D67A7B50045030F /* iniciar.png in Resources */,
 				5EBB30C41D7A69C6003B7335 /* Angola.JPG in Resources */,
+				5ED5CEBC1D899D89005CE3F8 /* 9LundaSul.jpg in Resources */,
 				5EADA1791D5F62110093201D /* pipe2.png in Resources */,
 				5EADA1661D5F5E3F0093201D /* Assets.xcassets in Resources */,
+				5EC2EAAD1D7BEEF60015EE98 /* vOn.png in Resources */,
+				5ED5CEC01D899E79005CE3F8 /* 13CuanzaNorte.jpg in Resources */,
 				5EADA1641D5F5E3F0093201D /* Main.storyboard in Resources */,
+				5ED5CEB21D899988005CE3F8 /* 4Namibe.jpg in Resources */,
 				5EADA1761D5F62110093201D /* flappy1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +325,7 @@
 				5EADA1611D5F5E3F0093201D /* GameViewController.swift in Sources */,
 				5EA36F721D7352FB00519335 /* NiveisViewController.swift in Sources */,
 				5EADA15B1D5F5E3F0093201D /* AppDelegate.swift in Sources */,
+				5EEEC8821D809F3C007B0D65 /* DesbloqueioUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

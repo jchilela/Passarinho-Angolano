@@ -955,7 +955,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             milhoContacto = false
         }else if milhoContacto == false {*/
         // Give position to the image
-        bird.position = CGPoint(x: CGRectGetMidX(self.frame) , y: CGRectGetMidX(self.frame))
+        bird.position = CGPoint(x: CGRectGetMidX(self.frame) - 100 , y: CGRectGetMidX(self.frame))
         
         //add the animation
         bird.runAction(makeBirdFlap)
@@ -1487,7 +1487,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             audioPlayerIrJogando.play()
             }
             entreDezeVinte = false
-        }else if score > 20 && maiorQueVinte == true {
+        }else if score > 20 && score < 120 && maiorQueVinte == true {
             irJogando =  NSBundle.mainBundle().pathForResource("irJogando2", ofType: "mp3")!
             do {
                 
@@ -1505,7 +1505,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             audioPlayerIrJogando.play()
             }
             maiorQueVinte = false
+        }else {
+            irJogando =  NSBundle.mainBundle().pathForResource("irJogando2", ofType: "mp3")!
+            do {
+                
+                
+                try audioPlayerIrJogando = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: irJogando))
+                
+                
+                
+            } catch {
+                
+                //Process the error here
+                
+            }
+            if defaults.integerForKey("som") != 0 {
+                audioPlayerIrJogando.play()
+            }
         }
+ 
      
         
         
