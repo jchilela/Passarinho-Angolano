@@ -238,6 +238,7 @@
 					5EADA1561D5F5E3F0093201D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = AUYPXEFQ6H;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -441,10 +442,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Flappy Bird/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.juliochilela.passarinho-angolano";
 				PRODUCT_NAME = "Passarinho Angolano";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,10 +459,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Flappy Bird/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.juliochilela.passarinho-angolano";
 				PRODUCT_NAME = "Passarinho Angolano";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

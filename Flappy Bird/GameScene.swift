@@ -12,7 +12,8 @@ import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-
+    var songToPlay = "playSong1" // Is the name of the function that contains the sound that will be called.
+    
        //Rewards
    
     var ginguba = SKSpriteNode()
@@ -86,7 +87,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
  
     
-  
+    
+    var entreDezeVinte_count = 0 // I want to count until 15 points to change the music and then restart
     
     
     
@@ -911,13 +913,91 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         
+        //--- I want to change the music all the time. Every 2 minutes
+         var song1Timer = NSTimer.scheduledTimerWithTimeInterval(30.0, target: self, selector: Selector("playSong1"), userInfo: nil, repeats: true)
+        
+        // var song2Timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("playSong2"), userInfo: nil, repeats: true)
+        
+        
+       
+ 
         
     }
     
     
-    
-    
-    
+    // Call this funtion to change the sound
+    func playSong1()
+    {
+    if entreDezeVinte_count == 0 {
+        irJogando =  NSBundle.mainBundle().pathForResource("irJogando", ofType: "mp3")!
+        do {
+            
+            
+            try audioPlayerIrJogando = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: irJogando))
+            
+            
+            
+        } catch {
+            
+            //Process the error here
+            
+        }
+        if defaults.integerForKey("som") != 0 {
+            audioPlayerIrJogando.play()
+        }
+        print(songToPlay)
+        songToPlay = "playSong2"
+        
+       entreDezeVinte_count = 1
+    }else if entreDezeVinte_count == 1 {
+        
+        irJogando =  NSBundle.mainBundle().pathForResource("irJogando2", ofType: "mp3")!
+        do {
+            
+            
+            try audioPlayerIrJogando = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: irJogando))
+            
+            
+            
+        } catch {
+            
+            //Process the error here
+            
+        }
+        if defaults.integerForKey("som") != 0 {
+            audioPlayerIrJogando.play()
+        }
+        print(songToPlay)
+        songToPlay = "playSong1"
+        
+        entreDezeVinte_count = 2
+    }else{
+        
+        
+        irJogando =  NSBundle.mainBundle().pathForResource("irJogando3", ofType: "mp3")!
+        do {
+            
+            
+            try audioPlayerIrJogando = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: irJogando))
+            
+            
+            
+        } catch {
+            
+            //Process the error here
+            
+        }
+        if defaults.integerForKey("som") != 0 {
+            audioPlayerIrJogando.play()
+        }
+        print(songToPlay)
+        songToPlay = "playSong1"
+        
+        entreDezeVinte_count = 0
+        
+        
+        }
+    }
     
     func makeBird(){
         // Add the pause button
@@ -1462,14 +1542,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-       
+        
+        
     }
-
+    
+    
+    
+    
+    
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         
-        //--- I want to change the music all the time that I increase my score
-        if score > 10 && score < 20 && entreDezeVinte == true {
+        
+      /*  if score > 10 && score < 20 && entreDezeVinte == true {
             irJogando =  NSBundle.mainBundle().pathForResource("irJogando", ofType: "mp3")!
             do {
                 
@@ -1487,6 +1573,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             audioPlayerIrJogando.play()
             }
             entreDezeVinte = false
+            
         }else if score > 20 && score < 120 && maiorQueVinte == true {
             irJogando =  NSBundle.mainBundle().pathForResource("irJogando2", ofType: "mp3")!
             do {
@@ -1522,7 +1609,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if defaults.integerForKey("som") != 0 {
                 audioPlayerIrJogando.play()
             }
-        }
+        }*/
  
      
         
